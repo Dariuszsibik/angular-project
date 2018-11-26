@@ -1,8 +1,12 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { BrowserModule } from '@angular/platform-browser';
+import { HttpModule } from '@angular/http';
+import { FormsModule } from '@angular/forms'
 import { AppComponent } from './app.component';
-import { CarsModule } from './cars/cars.module'
+import { CarsModule } from './cars/cars.module';
+import { CarsService } from './cars/cars.service';
+
+
 
 @NgModule({
   declarations: [
@@ -10,9 +14,11 @@ import { CarsModule } from './cars/cars.module'
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    HttpModule,
     CarsModule
   ],
-  providers: [],
+  providers: [CarsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
