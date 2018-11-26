@@ -19,6 +19,7 @@ export class CarsListComponent implements OnInit, AfterViewInit {
 
   ngOnInit() {
       this.loadCars();
+      this.totalCostRef.showGross();
   }
 
   loadCars() : void {
@@ -29,7 +30,7 @@ export class CarsListComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-      this.totalCostRef.showGross();
+
   }
 
   showGross() : void {
