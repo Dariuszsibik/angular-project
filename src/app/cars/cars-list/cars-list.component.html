@@ -59,3 +59,68 @@
     </div>
 
 </div>
+
+<p class="data-header"></p>
+
+<div class="data-container">
+    <form [formGroup]="carForm">
+        <div class="row form-group">
+            <div class="col-sm-4">
+                <label>Model</label>
+                <input formControlName="model" type="text" class="form-control" placeholder="model">
+            </div>
+            <div class="col-sm-4">
+                <label>Type</label>
+                <input formControlName="type" type="text" class="form-control" placeholder="type">
+            </div>
+            <div class="col-sm-4">
+                <label>Plate</label>
+                <input formControlName="plate" type="text" class="form-control" placeholder="plate">
+            </div>
+        </div>
+        <div class="row form-group">
+            <div class="col-sm-4">
+                <label>Delivery Date</label>
+                <input formControlName="deliveryDate" formControlName="model" type="text" class="form-control" placeholder="Delivery Date">
+            </div>
+            <div class="col-sm-4">
+                <label>Deadline</label>
+                <input formControlName="deadline" formControlName="model" type="text" class="form-control" placeholder="Deadline">
+            </div>
+            <div class="col-sm-4">
+                <label>Cost</label>
+                <input formControlName="cost" formControlName="model" type="text" class="form-control" placeholder="cost">
+            </div>
+        </div>
+        <div class="row form-group">
+            <div class="col-sm-4">
+                <label>Color</label>
+                <input formControlName="color" type="text" class="form-control" placeholder="Color">
+            </div>
+            <div class="col-sm-4">
+                <label>Power</label>
+                <input formControlName="power" type="text" class="form-control" placeholder="Power">
+            </div>
+            <div class="col-sm-4">
+                    <label>Is car fully damaged</label>
+                    <input formControlName="isFullyDamaged" type="checkbox" class="form-control">
+            </div>
+        </div>
+        <div class="row form-group">
+            <div class="col-sm-4">
+                <label>First Name</label>
+                <input formControlName="clientFirstName" type="text" class="form-control" placeholder="First Name">
+            </div>
+            <div class="col-sm-4">
+                <label>Last Name</label>
+                <input formControlName="clientSurname" type="text" class="form-control" placeholder="Last Name">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <button type="submit" class="btn btn-primary float-right">Add car</button>
+            </div>
+        </div>
+    </form>
+    <!-- <pre> {{ carForm.value | json}} </pre> -->
+</div>
