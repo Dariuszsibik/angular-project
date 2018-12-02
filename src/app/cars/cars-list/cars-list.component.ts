@@ -2,6 +2,7 @@ import { Component, OnInit, AfterViewInit, ViewEncapsulation, ViewChild, AfterVi
 import { Car } from '../models/car';
 import { TotalCostComponent } from '../total-cost/total-cost.component';
 import { CarsService } from '../cars.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'cs-cars-list',
@@ -15,7 +16,8 @@ export class CarsListComponent implements OnInit, AfterViewInit {
   grossCost : number
   cars: Car[];
 
-  constructor(private carsService: CarsService) { }
+  constructor(private carsService: CarsService,
+              private router : Router) { }
 
   ngOnInit() {
       this.loadCars();
@@ -27,6 +29,10 @@ export class CarsListComponent implements OnInit, AfterViewInit {
           this.cars = cars;
           this.countTotalCost();
       })
+  }
+
+  goToCarDetails(car : Car) {
+      this.router.navigate(['/cars', car.id]);
   }
 
   ngAfterViewInit() {
