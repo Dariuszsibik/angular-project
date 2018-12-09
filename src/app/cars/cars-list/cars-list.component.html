@@ -27,7 +27,7 @@
                       <td> {{ car?.plate }} </td>
                       <td> {{ car?.deliveryDate }} </td>
                       <td> {{ car?.deadline }} </td>
-                      <td> {{ car?.clientfirstName }} {{ car?.clientsurname}} </td>
+                      <td> {{ car?.clientFirstName }} {{ car?.clientSurname}} </td>
                       <td> {{ car?.cost }} </td>
                       <td> ACTION PLACEHOLDER </td>
                   </tr>
@@ -83,15 +83,15 @@
         <div class="row form-group">
             <div class="col-sm-4">
                 <label>Delivery Date</label>
-                <input formControlName="deliveryDate" formControlName="model" type="text" class="form-control" placeholder="Delivery Date">
+                <input formControlName="deliveryDate" type="text" class="form-control" placeholder="Delivery Date">
             </div>
             <div class="col-sm-4">
                 <label>Deadline</label>
-                <input formControlName="deadline" formControlName="model" type="text" class="form-control" placeholder="Deadline">
+                <input formControlName="deadline" type="text" class="form-control" placeholder="Deadline">
             </div>
             <div class="col-sm-4">
                 <label>Cost</label>
-                <input formControlName="cost" formControlName="model" type="text" class="form-control" placeholder="cost">
+                <input formControlName="cost" type="text" class="form-control" placeholder="cost">
             </div>
         </div>
         <div class="row form-group">
@@ -131,6 +131,6 @@
         </div>
     </form>
     <!-- <pre> {{ carForm.value | json}} </pre> -->
-    <pre> Stan walidacji inputa model: {{ carForm.get('model').valid | json}} </pre>
-    <pre> Stan walidacji inputa plate: {{ carForm.get('plate').valid | json}} </pre>
+    <!-- <pre> Stan walidacji inputa model: {{ carForm.get('model').valid | json}} </pre>
+    <pre> Stan walidacji inputa plate: {{ carForm.get('plate').valid | json}} </pre> -->
 </div>
