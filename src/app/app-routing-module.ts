@@ -9,7 +9,7 @@ const APP_ROUTERS: Route[] = [
 
 @NgModule({
     imports: [
-        RouterModule.forRoot(APP_ROUTERS)
+        RouterModule.forRoot(APP_ROUTERS, {useHash: true})
     ],
     exports: [
         RouterModule
