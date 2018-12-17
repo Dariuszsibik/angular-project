@@ -25,18 +25,20 @@ export class CarDetailsComponent implements OnInit {
 
   buildCarForm() {
     return this.formBuilder.group({
-      model: [this.car.model, Validators.required],
-      type:  this.car.type,
-      plate:  [this.car.plate, [Validators.required, Validators.minLength(3), Validators.maxLength(7)]],
-      deliveryDate:  this.car.deliveryDate,
-      deadline:  this.car.deadline,
-      cost: this.car.cost,
-      color:  this.car.color,
-      power:  this.car.power,
       clientFirstName:  this.car.clientFirstName,
       clientSurname: this.car.clientSurname,
+      color:  this.car.color,
+      cost: this.car.cost,
+      deadline:  this.car.deadline,
+      deliveryDate:  this.car.deliveryDate,
+      id: this.car.id,
       isFullyDamaged:  this.car.isFullyDamaged,
-      year: this.car.year
+      model: [this.car.model, Validators.required],
+      plate:  [this.car.plate, [Validators.required, Validators.minLength(3), Validators.maxLength(7)]],
+      power:  this.car.power,
+      type:  this.car.type,
+      year: this.car.year,
+      key: this.car.key
     });
   }
 

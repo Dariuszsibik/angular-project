@@ -5,7 +5,7 @@ import { Injectable } from "@angular/core";
 
 @Injectable()
 export class CarResolve implements Resolve<Car> {
-    constructor ( private carsService : CarsService ) {}
+    constructor ( private carsService : CarsService) {}
 
     resolve(route : ActivatedRouteSnapshot) {
         return this.carsService.getCar(route.params['id']);

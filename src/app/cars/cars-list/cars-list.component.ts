@@ -56,13 +56,11 @@ export class CarsListComponent implements OnInit, AfterViewInit {
   }
 
   addCar() {
-       this.carsService.addCar(this.carForm.value).subscribe(()=> {
-            this.loadCars();
-      });
+       this.carsService.addCar(this.carForm.value);
   }
 
   goToCarDetails(car : Car) {
-      this.router.navigate(['/cars', car.id]);
+      this.router.navigate(['/cars', car.key]);
   }
 
   removeCar(car: Car, event) {

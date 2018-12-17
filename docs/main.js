@@ -266,18 +266,20 @@ var CarDetailsComponent = /** @class */ (function () {
     };
     CarDetailsComponent.prototype.buildCarForm = function () {
         return this.formBuilder.group({
-            model: [this.car.model, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
-            type: this.car.type,
-            plate: [this.car.plate, [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].minLength(3), _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].maxLength(7)]],
-            deliveryDate: this.car.deliveryDate,
-            deadline: this.car.deadline,
-            cost: this.car.cost,
-            color: this.car.color,
-            power: this.car.power,
             clientFirstName: this.car.clientFirstName,
             clientSurname: this.car.clientSurname,
+            color: this.car.color,
+            cost: this.car.cost,
+            deadline: this.car.deadline,
+            deliveryDate: this.car.deliveryDate,
+            id: this.car.id,
             isFullyDamaged: this.car.isFullyDamaged,
-            year: this.car.year
+            model: [this.car.model, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required],
+            plate: [this.car.plate, [_angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].minLength(3), _angular_forms__WEBPACK_IMPORTED_MODULE_3__["Validators"].maxLength(7)]],
+            power: this.car.power,
+            type: this.car.type,
+            year: this.car.year,
+            key: this.car.key
         });
     };
     CarDetailsComponent.prototype.updateCar = function () {
@@ -436,13 +438,10 @@ var CarsListComponent = /** @class */ (function () {
         });
     };
     CarsListComponent.prototype.addCar = function () {
-        var _this = this;
-        this.carsService.addCar(this.carForm.value).subscribe(function () {
-            _this.loadCars();
-        });
+        this.carsService.addCar(this.carForm.value);
     };
     CarsListComponent.prototype.goToCarDetails = function (car) {
-        this.router.navigate(['/cars', car.id]);
+        this.router.navigate(['/cars', car.key]);
     };
     CarsListComponent.prototype.removeCar = function (car, event) {
         var _this = this;
@@ -640,8 +639,6 @@ var CarsService = /** @class */ (function () {
     function CarsService(db, http) {
         this.db = db;
         this.http = http;
-        //carsCollection: AngularFirestoreCollection<Car>;
-        //cars: Observable<Car[]>;
         this.apiUrl = "/cars";
     }
     CarsService.prototype.getCars = function () {
@@ -649,24 +646,25 @@ var CarsService = /** @class */ (function () {
         return this.db.list(this.apiUrl).snapshotChanges()
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (response) { return response.map(function (car) { return _this.assignKey(car); }); }));
     };
-    CarsService.prototype.assignKey = function (car) {
-        return __assign({}, car.payload.val(), { key: car.key });
-    };
-    CarsService.prototype.getCar = function (id) {
-        return this.http.get("https://angular-project-1880d.firebaseio.com/" + id + "/.json")
+    CarsService.prototype.getCar = function (key) {
+        return this.http.get("https://angular-project-1880d.firebaseio.com/cars/" + key + "/.json")
             .map(function (res) { return res.json(); });
+        // return this.db.object<Car>(`${this.apiUrl}/${key}`).snapshotChanges()
+        //   .pipe(map(car => this.assignKey(car)));
     };
     CarsService.prototype.updateCar = function (id, data) {
         return this.http.put("https://angular-project-1880d.firebaseio.com/" + id, data)
             .map(function (res) { return res.json(); });
     };
-    CarsService.prototype.addCar = function (data) {
-        return this.http.post('https://angular-project-1880d.firebaseio.com/cars', data)
-            .map(function (res) { return res.json(); });
+    CarsService.prototype.addCar = function (car) {
+        return this.db.list(this.apiUrl).push(car);
     };
     CarsService.prototype.removeCar = function (id) {
         return this.http.delete("https://angular-project-1880d.firebaseio.com/" + id)
             .map(function (res) { return res.json(); });
+    };
+    CarsService.prototype.assignKey = function (car) {
+        return __assign({}, car.payload.val(), { key: car.key });
     };
     CarsService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({

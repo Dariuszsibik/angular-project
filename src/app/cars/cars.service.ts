@@ -11,8 +11,6 @@ import { AngularFireDatabase } from 'angularfire2/database';
   providedIn: 'root'
 })
 export class CarsService {
-  //carsCollection: AngularFirestoreCollection<Car>;
-  //cars: Observable<Car[]>;
   private apiUrl = "/cars";
 
   constructor(
@@ -24,28 +22,29 @@ export class CarsService {
       .pipe(map(response => response.map(car => this.assignKey(car))));
   }
 
-  private assignKey(car) {
-    return {...car.payload.val(), key: car.key}
-  }
-
-  getCar(id: number) : Observable<Car> {
-    return this.http.get(`https://angular-project-1880d.firebaseio.com/${id}/.json`)
-      .map((res) => res.json())
+  getCar(key: string) : Observable<Car> {
+     return this.http.get(`https://angular-project-1880d.firebaseio.com/cars/${key}/.json`)
+       .map((res) => res.json())
+    // return this.db.object<Car>(`${this.apiUrl}/${key}`).snapshotChanges()
+    //   .pipe(map(car => this.assignKey(car)));
   }
 
   updateCar(id: number, data) : Observable<Car> {
     return this.http.put(`https://angular-project-1880d.firebaseio.com/${id}`, data)
-      .map((res) => res.json())
+    .map((res) => res.json())
   }
 
-  addCar(data) : Observable<Car> {
-    return this.http.post('https://angular-project-1880d.firebaseio.com/cars', data)
-    .map((res) => res.json())
+  addCar(car: Car) {
+    return this.db.list<Car>(this.apiUrl).push(car);
   }
 
   removeCar(id: number) : Observable<Car> {
     return this.http.delete(`https://angular-project-1880d.firebaseio.com/${id}`)
-      .map((res) => res.json())
+    .map((res) => res.json())
+  }
+
+  private assignKey(car) {
+    return {...car.payload.val(), key: car.key}
   }
 
 }
