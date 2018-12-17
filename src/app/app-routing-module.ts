@@ -3,6 +3,7 @@ import { RouterModule, Route } from "@angular/router";
 import { CarsListComponent } from "./cars/cars-list/cars-list.component";
 
 const APP_ROUTERS: Route[] = [
+    //{ path: '', redirectTo: '/login', pathMatch: 'full'}
     { path: '', pathMatch: 'full', redirectTo: 'cars' },
     { path: 'cars', component: <any>CarsListComponent}
 ];

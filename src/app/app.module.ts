@@ -8,6 +8,10 @@ import { CarsService } from './cars/cars.service';
 import { CoreModule } from './core-module/core-module';
 import { AppRoutingModule } from './app-routing-module';
 import { CarsRoutingModule } from './cars/cars-routing.module';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { environment } from './../environments/environment';
+import { MaterialModule } from './material/material.module';
 
 
 @NgModule({
@@ -21,7 +25,10 @@ import { CarsRoutingModule } from './cars/cars-routing.module';
     CarsModule,
     CoreModule,
     AppRoutingModule,
-    CarsRoutingModule
+    CarsRoutingModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
+    MaterialModule
   ],
   providers: [CarsService],
   bootstrap: [AppComponent]

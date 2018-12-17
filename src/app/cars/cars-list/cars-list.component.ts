@@ -4,6 +4,8 @@ import { TotalCostComponent } from '../total-cost/total-cost.component';
 import { CarsService } from '../cars.service';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import {Observable} from "rxjs/Observable";
+import 'rxjs-compat/add/operator/map';
 
 @Component({
   selector: 'cs-cars-list',
@@ -16,7 +18,9 @@ export class CarsListComponent implements OnInit, AfterViewInit {
   totalCost : number
   grossCost : number
   cars: Car[];
+  carsList: Observable<Car[]>;
   carForm : FormGroup;
+
 
   constructor(private carsService : CarsService,
               private formBuilder : FormBuilder,
@@ -24,7 +28,6 @@ export class CarsListComponent implements OnInit, AfterViewInit {
 
   ngOnInit() {
       this.loadCars();
-      //this.totalCostRef.showGross();
       this.carForm = this.buildCarForm();
   }
 
@@ -53,7 +56,7 @@ export class CarsListComponent implements OnInit, AfterViewInit {
   }
 
   addCar() {
-      this.carsService.addCar(this.carForm.value).subscribe(()=> {
+       this.carsService.addCar(this.carForm.value).subscribe(()=> {
             this.loadCars();
       });
   }

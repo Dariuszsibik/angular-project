@@ -46,6 +46,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 var APP_ROUTERS = [
+    //{ path: '', redirectTo: '/login', pathMatch: 'full'}
     { path: '', pathMatch: 'full', redirectTo: 'cars' },
     { path: 'cars', component: _cars_cars_list_cars_list_component__WEBPACK_IMPORTED_MODULE_2__["CarsListComponent"] }
 ];
@@ -76,7 +77,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<cs-sidebar></cs-sidebar>\r\n<div id=\"content-wrapper\">\r\n    <router-outlet></router-outlet>\r\n</div>"
+module.exports = "<mat-toolbar color=\"primary\">Hello World</mat-toolbar>\r\n<cs-sidebar></cs-sidebar>\r\n<div id=\"content-wrapper\">\r\n    <router-outlet></router-outlet>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -146,12 +147,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _core_module_core_module__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./core-module/core-module */ "./src/app/core-module/core-module.ts");
 /* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./app-routing-module */ "./src/app/app-routing-module.ts");
 /* harmony import */ var _cars_cars_routing_module__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./cars/cars-routing.module */ "./src/app/cars/cars-routing.module.ts");
+/* harmony import */ var angularfire2__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! angularfire2 */ "./node_modules/angularfire2/index.js");
+/* harmony import */ var angularfire2__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(angularfire2__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var angularfire2_database__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! angularfire2/database */ "./node_modules/angularfire2/database/index.js");
+/* harmony import */ var angularfire2_database__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(angularfire2_database__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./../environments/environment */ "./src/environments/environment.ts");
+/* harmony import */ var _material_material_module__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./material/material.module */ "./src/app/material/material.module.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
+
+
 
 
 
@@ -177,7 +188,10 @@ var AppModule = /** @class */ (function () {
                 _cars_cars_module__WEBPACK_IMPORTED_MODULE_5__["CarsModule"],
                 _core_module_core_module__WEBPACK_IMPORTED_MODULE_7__["CoreModule"],
                 _app_routing_module__WEBPACK_IMPORTED_MODULE_8__["AppRoutingModule"],
-                _cars_cars_routing_module__WEBPACK_IMPORTED_MODULE_9__["CarsRoutingModule"]
+                _cars_cars_routing_module__WEBPACK_IMPORTED_MODULE_9__["CarsRoutingModule"],
+                angularfire2__WEBPACK_IMPORTED_MODULE_10__["AngularFireModule"].initializeApp(_environments_environment__WEBPACK_IMPORTED_MODULE_12__["environment"].firebase),
+                angularfire2_database__WEBPACK_IMPORTED_MODULE_11__["AngularFireDatabaseModule"],
+                _material_material_module__WEBPACK_IMPORTED_MODULE_13__["MaterialModule"]
             ],
             providers: [_cars_cars_service__WEBPACK_IMPORTED_MODULE_6__["CarsService"]],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
@@ -371,6 +385,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _cars_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../cars.service */ "./src/app/cars/cars.service.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var rxjs_compat_add_operator_map__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs-compat/add/operator/map */ "./node_modules/rxjs-compat/add/operator/map.js");
+/* harmony import */ var rxjs_compat_add_operator_map__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(rxjs_compat_add_operator_map__WEBPACK_IMPORTED_MODULE_5__);
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -385,6 +401,7 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
 var CarsListComponent = /** @class */ (function () {
     function CarsListComponent(carsService, formBuilder, router) {
         this.carsService = carsService;
@@ -393,7 +410,6 @@ var CarsListComponent = /** @class */ (function () {
     }
     CarsListComponent.prototype.ngOnInit = function () {
         this.loadCars();
-        //this.totalCostRef.showGross();
         this.carForm = this.buildCarForm();
     };
     CarsListComponent.prototype.buildCarForm = function () {
@@ -590,8 +606,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CarsService", function() { return CarsService; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/http */ "./node_modules/@angular/http/fesm5/http.js");
-/* harmony import */ var rxjs_compat_add_operator_map__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs-compat/add/operator/map */ "./node_modules/rxjs-compat/add/operator/map.js");
-/* harmony import */ var rxjs_compat_add_operator_map__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(rxjs_compat_add_operator_map__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+/* harmony import */ var rxjs_compat_add_operator_map__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs-compat/add/operator/map */ "./node_modules/rxjs-compat/add/operator/map.js");
+/* harmony import */ var rxjs_compat_add_operator_map__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(rxjs_compat_add_operator_map__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var angularfire2_database__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! angularfire2/database */ "./node_modules/angularfire2/database/index.js");
+/* harmony import */ var angularfire2_database__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(angularfire2_database__WEBPACK_IMPORTED_MODULE_4__);
+var __assign = (undefined && undefined.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -604,36 +634,46 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
+
 var CarsService = /** @class */ (function () {
-    function CarsService(http) {
+    function CarsService(db, http) {
+        this.db = db;
         this.http = http;
-        this.apiUrl = "http://localhost:3000/api/cars";
+        //carsCollection: AngularFirestoreCollection<Car>;
+        //cars: Observable<Car[]>;
+        this.apiUrl = "/cars";
     }
     CarsService.prototype.getCars = function () {
-        return this.http.get(this.apiUrl)
-            .map(function (res) { return res.json(); });
+        var _this = this;
+        return this.db.list(this.apiUrl).snapshotChanges()
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (response) { return response.map(function (car) { return _this.assignKey(car); }); }));
+    };
+    CarsService.prototype.assignKey = function (car) {
+        return __assign({}, car.payload.val(), { key: car.key });
     };
     CarsService.prototype.getCar = function (id) {
-        return this.http.get(this.apiUrl + "/" + id)
+        return this.http.get("https://angular-project-1880d.firebaseio.com/" + id + "/.json")
             .map(function (res) { return res.json(); });
     };
     CarsService.prototype.updateCar = function (id, data) {
-        return this.http.put(this.apiUrl + "/" + id, data)
+        return this.http.put("https://angular-project-1880d.firebaseio.com/" + id, data)
             .map(function (res) { return res.json(); });
     };
     CarsService.prototype.addCar = function (data) {
-        return this.http.post(this.apiUrl, data)
+        return this.http.post('https://angular-project-1880d.firebaseio.com/cars', data)
             .map(function (res) { return res.json(); });
     };
     CarsService.prototype.removeCar = function (id) {
-        return this.http.delete(this.apiUrl + "/" + id)
+        return this.http.delete("https://angular-project-1880d.firebaseio.com/" + id)
             .map(function (res) { return res.json(); });
     };
     CarsService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
             providedIn: 'root'
         }),
-        __metadata("design:paramtypes", [_angular_http__WEBPACK_IMPORTED_MODULE_1__["Http"]])
+        __metadata("design:paramtypes", [angularfire2_database__WEBPACK_IMPORTED_MODULE_4__["AngularFireDatabase"],
+            _angular_http__WEBPACK_IMPORTED_MODULE_1__["Http"]])
     ], CarsService);
     return CarsService;
 }());
@@ -820,6 +860,54 @@ var SidebarComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [])
     ], SidebarComponent);
     return SidebarComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/material/material.module.ts":
+/*!*********************************************!*\
+  !*** ./src/app/material/material.module.ts ***!
+  \*********************************************/
+/*! exports provided: MaterialModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MaterialModule", function() { return MaterialModule; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+var MATERIAL_MODULES = [
+    _angular_material__WEBPACK_IMPORTED_MODULE_1__["MatIconModule"],
+    _angular_material__WEBPACK_IMPORTED_MODULE_1__["MatCardModule"],
+    _angular_material__WEBPACK_IMPORTED_MODULE_1__["MatFormFieldModule"],
+    _angular_material__WEBPACK_IMPORTED_MODULE_1__["MatInputModule"],
+    _angular_material__WEBPACK_IMPORTED_MODULE_1__["MatDialogModule"],
+    _angular_material__WEBPACK_IMPORTED_MODULE_1__["MatButtonModule"],
+    _angular_material__WEBPACK_IMPORTED_MODULE_1__["MatSnackBarModule"],
+    _angular_material__WEBPACK_IMPORTED_MODULE_1__["MatCheckboxModule"],
+    _angular_material__WEBPACK_IMPORTED_MODULE_1__["MatSelectModule"],
+    _angular_material__WEBPACK_IMPORTED_MODULE_1__["MatToolbarModule"]
+];
+var MaterialModule = /** @class */ (function () {
+    function MaterialModule() {
+    }
+    MaterialModule = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
+            declarations: [],
+            exports: MATERIAL_MODULES.slice()
+        })
+    ], MaterialModule);
+    return MaterialModule;
 }());
 
 
@@ -1027,7 +1115,15 @@ __webpack_require__.r(__webpack_exports__);
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 var environment = {
-    production: false
+    production: false,
+    firebase: {
+        apiKey: 'AIzaSyBWKQFyAWcX8-n6yC68TYx-JEoDwwUnh6c',
+        authDomain: 'angular-project-1880d.firebaseapp.com',
+        databaseURL: 'https://angular-project-1880d.firebaseio.com',
+        projectId: 'angular-project-1880d',
+        storageBucket: 'angular-project-1880d.appspot.com',
+        messagingSenderId: '422831307765'
+    }
 };
 /*
  * For easier debugging in development mode, you can import the following file

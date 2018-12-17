@@ -1,38 +1,51 @@
 import { Injectable } from '@angular/core';
 import {Car} from "./models/car";
-import {Observable} from "rxjs";
+import {Observable} from "rxjs/Observable";
 import {Http} from "@angular/http";
+import { map } from 'rxjs/operators';
 import 'rxjs-compat/add/operator/map';
+import { AngularFireDatabase } from 'angularfire2/database';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class CarsService {
-  private apiUrl = "http://localhost:3000/api/cars";
-  constructor(private http: Http) { }
+  //carsCollection: AngularFirestoreCollection<Car>;
+  //cars: Observable<Car[]>;
+  private apiUrl = "/cars";
 
-  getCars() : Observable<Car[]> {
-    return this.http.get(this.apiUrl)
-      .map((res) => res.json())
+  constructor(
+    private db: AngularFireDatabase,
+    private http: Http) {}
+
+  getCars(): Observable<Car[]> {
+    return this.db.list<Car>(this.apiUrl).snapshotChanges()
+      .pipe(map(response => response.map(car => this.assignKey(car))));
+  }
+
+  private assignKey(car) {
+    return {...car.payload.val(), key: car.key}
   }
 
   getCar(id: number) : Observable<Car> {
-    return this.http.get(`${this.apiUrl}/${id}`)
+    return this.http.get(`https://angular-project-1880d.firebaseio.com/${id}/.json`)
       .map((res) => res.json())
   }
 
   updateCar(id: number, data) : Observable<Car> {
-    return this.http.put(`${this.apiUrl}/${id}`, data)
+    return this.http.put(`https://angular-project-1880d.firebaseio.com/${id}`, data)
       .map((res) => res.json())
   }
 
   addCar(data) : Observable<Car> {
-    return this.http.post(this.apiUrl, data)
+    return this.http.post('https://angular-project-1880d.firebaseio.com/cars', data)
     .map((res) => res.json())
   }
 
   removeCar(id: number) : Observable<Car> {
-    return this.http.delete(`${this.apiUrl}/${id}`)
+    return this.http.delete(`https://angular-project-1880d.firebaseio.com/${id}`)
       .map((res) => res.json())
   }
+
 }
