@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { CarsModule } from './cars/cars.module';
 import { CarsService } from './cars/cars.service';
 import { CoreModule } from './core-module/core-module';
+import { SharedModule } from './shared-module/shared-module';
 import { AppRoutingModule } from './app-routing-module';
 import { CarsRoutingModule } from './cars/cars-routing.module';
 import { AngularFireModule } from 'angularfire2';
@@ -30,6 +31,7 @@ import { FlightsComponent } from './flights/flights.component';
     HttpModule,
     CarsModule,
     CoreModule,
+    SharedModule,
     AppRoutingModule,
     CarsRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),

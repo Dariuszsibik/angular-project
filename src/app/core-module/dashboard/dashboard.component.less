@@ -1,0 +1,35 @@
+.img {
+    margin: 40px;
+    margin-top: 120px;
+    background: black;
+
+
+    .img-thumbnail {
+        width: 450px;
+        height: 200px;
+        cursor: pointer;
+        display: block;
+        width: 100%;
+        height: auto;
+        -webkit-transition: opacity 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+        transition: opacity 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        opacity: .7;
+        transition: all .25s ease-in-out;
+    }
+}
+
+.img .img-thumbnail:hover {
+    border: 1px solid black;
+    opacity: .4;
+    transition: all .25s ease-in-out;
+}
+
+.img-text {
+    font-size: 25px;
+    font-weight: bold;
+    background: whitesmoke;
+    border: 1px solid black;
+
+}
