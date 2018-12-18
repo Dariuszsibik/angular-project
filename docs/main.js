@@ -36,6 +36,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _cars_cars_list_cars_list_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./cars/cars-list/cars-list.component */ "./src/app/cars/cars-list/cars-list.component.ts");
+/* harmony import */ var _core_module_login_login_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./core-module/login/login.component */ "./src/app/core-module/login/login.component.ts");
+/* harmony import */ var _core_module_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./core-module/dashboard/dashboard.component */ "./src/app/core-module/dashboard/dashboard.component.ts");
+/* harmony import */ var _flights_flights_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./flights/flights.component */ "./src/app/flights/flights.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -45,10 +48,15 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
+
+
 var APP_ROUTERS = [
-    //{ path: '', redirectTo: '/login', pathMatch: 'full'}
-    { path: '', pathMatch: 'full', redirectTo: 'cars' },
-    { path: 'cars', component: _cars_cars_list_cars_list_component__WEBPACK_IMPORTED_MODULE_2__["CarsListComponent"] }
+    { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+    { path: 'login', component: _core_module_login_login_component__WEBPACK_IMPORTED_MODULE_3__["LoginComponent"] },
+    { path: 'dashboard', component: _core_module_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_4__["DashboardComponent"] },
+    { path: 'cars', component: _cars_cars_list_cars_list_component__WEBPACK_IMPORTED_MODULE_2__["CarsListComponent"] },
+    { path: 'flights', component: _flights_flights_component__WEBPACK_IMPORTED_MODULE_5__["FlightsComponent"] }
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
@@ -77,7 +85,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<mat-toolbar color=\"primary\">Hello World</mat-toolbar>\r\n<cs-sidebar></cs-sidebar>\r\n<div id=\"content-wrapper\">\r\n    <router-outlet></router-outlet>\r\n</div>\r\n"
+module.exports = "    <router-outlet></router-outlet>\r\n\r\n"
 
 /***/ }),
 
@@ -145,20 +153,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _cars_cars_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./cars/cars.module */ "./src/app/cars/cars.module.ts");
 /* harmony import */ var _cars_cars_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./cars/cars.service */ "./src/app/cars/cars.service.ts");
 /* harmony import */ var _core_module_core_module__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./core-module/core-module */ "./src/app/core-module/core-module.ts");
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./app-routing-module */ "./src/app/app-routing-module.ts");
-/* harmony import */ var _cars_cars_routing_module__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./cars/cars-routing.module */ "./src/app/cars/cars-routing.module.ts");
-/* harmony import */ var angularfire2__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! angularfire2 */ "./node_modules/angularfire2/index.js");
-/* harmony import */ var angularfire2__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(angularfire2__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var angularfire2_database__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! angularfire2/database */ "./node_modules/angularfire2/database/index.js");
-/* harmony import */ var angularfire2_database__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(angularfire2_database__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./../environments/environment */ "./src/environments/environment.ts");
-/* harmony import */ var _material_material_module__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./material/material.module */ "./src/app/material/material.module.ts");
+/* harmony import */ var _app_flights_flights_module__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../app/flights/flights.module */ "./src/app/flights/flights.module.ts");
+/* harmony import */ var _shared_module_shared_module__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./shared-module/shared-module */ "./src/app/shared-module/shared-module.ts");
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./app-routing-module */ "./src/app/app-routing-module.ts");
+/* harmony import */ var _cars_cars_routing_module__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./cars/cars-routing.module */ "./src/app/cars/cars-routing.module.ts");
+/* harmony import */ var angularfire2__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! angularfire2 */ "./node_modules/angularfire2/index.js");
+/* harmony import */ var angularfire2__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(angularfire2__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var angularfire2_database__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! angularfire2/database */ "./node_modules/angularfire2/database/index.js");
+/* harmony import */ var angularfire2_database__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(angularfire2_database__WEBPACK_IMPORTED_MODULE_13__);
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./../environments/environment */ "./src/environments/environment.ts");
+/* harmony import */ var _material_material_module__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./material/material.module */ "./src/app/material/material.module.ts");
+/* harmony import */ var _core_module_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./core-module/dashboard/dashboard.component */ "./src/app/core-module/dashboard/dashboard.component.ts");
+/* harmony import */ var _core_module_login_login_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./core-module/login/login.component */ "./src/app/core-module/login/login.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
+
+
 
 
 
@@ -180,6 +196,8 @@ var AppModule = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
             declarations: [
                 _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"],
+                _core_module_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_16__["DashboardComponent"],
+                _core_module_login_login_component__WEBPACK_IMPORTED_MODULE_17__["LoginComponent"],
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -187,11 +205,13 @@ var AppModule = /** @class */ (function () {
                 _angular_http__WEBPACK_IMPORTED_MODULE_2__["HttpModule"],
                 _cars_cars_module__WEBPACK_IMPORTED_MODULE_5__["CarsModule"],
                 _core_module_core_module__WEBPACK_IMPORTED_MODULE_7__["CoreModule"],
-                _app_routing_module__WEBPACK_IMPORTED_MODULE_8__["AppRoutingModule"],
-                _cars_cars_routing_module__WEBPACK_IMPORTED_MODULE_9__["CarsRoutingModule"],
-                angularfire2__WEBPACK_IMPORTED_MODULE_10__["AngularFireModule"].initializeApp(_environments_environment__WEBPACK_IMPORTED_MODULE_12__["environment"].firebase),
-                angularfire2_database__WEBPACK_IMPORTED_MODULE_11__["AngularFireDatabaseModule"],
-                _material_material_module__WEBPACK_IMPORTED_MODULE_13__["MaterialModule"]
+                _shared_module_shared_module__WEBPACK_IMPORTED_MODULE_9__["SharedModule"],
+                _app_routing_module__WEBPACK_IMPORTED_MODULE_10__["AppRoutingModule"],
+                _cars_cars_routing_module__WEBPACK_IMPORTED_MODULE_11__["CarsRoutingModule"],
+                angularfire2__WEBPACK_IMPORTED_MODULE_12__["AngularFireModule"].initializeApp(_environments_environment__WEBPACK_IMPORTED_MODULE_14__["environment"].firebase),
+                angularfire2_database__WEBPACK_IMPORTED_MODULE_13__["AngularFireDatabaseModule"],
+                _material_material_module__WEBPACK_IMPORTED_MODULE_15__["MaterialModule"],
+                _app_flights_flights_module__WEBPACK_IMPORTED_MODULE_8__["FlightsModule"]
             ],
             providers: [_cars_cars_service__WEBPACK_IMPORTED_MODULE_6__["CarsService"]],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
@@ -211,7 +231,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<cs-header>\r\n    <p levels>cars /{{ car.model }}</p>\r\n\r\n    <div content>\r\n        <p>Car details</p>\r\n    </div>\r\n</cs-header>\r\n\r\n<p class=\"data-header\">Edit {{ car.model }} </p>\r\n\r\n<div class=\"data-container\">\r\n        <form [formGroup]=\"carForm\">\r\n            <div class=\"row form-group\">\r\n                <div class=\"col-sm-4\">\r\n                    <label>Model</label>\r\n                    <input formControlName=\"model\" type=\"text\" class=\"form-control\" placeholder=\"model\">\r\n                    <p *ngIf=\"!carForm.get('model').valid && carForm.get('model').dirty\" class=\"error\">This field is required!</p>\r\n                </div>\r\n                <div class=\"col-sm-4\">\r\n                    <label>Type</label>\r\n                    <input formControlName=\"type\" type=\"text\" class=\"form-control\" placeholder=\"type\">\r\n                </div>\r\n                <div class=\"col-sm-4\">\r\n                    <label>Plate</label>\r\n                    <input formControlName=\"plate\" type=\"text\" class=\"form-control\" placeholder=\"plate\">\r\n                    <p *ngIf=\"!carForm.get('plate').valid && carForm.get('plate').dirty\" class=\"error\">This field is required and must contain 3-7 characters</p>\r\n                </div>\r\n            </div>\r\n            <div class=\"row form-group\">\r\n                <div class=\"col-sm-4\">\r\n                    <label>Delivery Date</label>\r\n                    <input formControlName=\"deliveryDate\" formControlName=\"model\" type=\"text\" class=\"form-control\" placeholder=\"Delivery Date\">\r\n                </div>\r\n                <div class=\"col-sm-4\">\r\n                    <label>Deadline</label>\r\n                    <input formControlName=\"deadline\" formControlName=\"model\" type=\"text\" class=\"form-control\" placeholder=\"Deadline\">\r\n                </div>\r\n                <div class=\"col-sm-4\">\r\n                    <label>Cost</label>\r\n                    <input formControlName=\"cost\" formControlName=\"model\" type=\"text\" class=\"form-control\" placeholder=\"cost\">\r\n                </div>\r\n            </div>\r\n            <div class=\"row form-group\">\r\n                <div class=\"col-sm-4\">\r\n                    <label>Color</label>\r\n                    <input formControlName=\"color\" type=\"text\" class=\"form-control\" placeholder=\"Color\">\r\n                </div>\r\n                <div class=\"col-sm-4\">\r\n                    <label>Power</label>\r\n                    <input formControlName=\"power\" type=\"text\" class=\"form-control\" placeholder=\"Power\">\r\n                </div>\r\n                <div class=\"col-sm-4\">\r\n                        <label>Is car fully damaged</label>\r\n                        <input formControlName=\"isFullyDamaged\" type=\"checkbox\" class=\"form-control\">\r\n                </div>\r\n            </div>\r\n            <div class=\"row form-group\">\r\n                <div class=\"col-sm-4\">\r\n                    <label>First Name</label>\r\n                    <input formControlName=\"clientFirstName\" type=\"text\" class=\"form-control\" placeholder=\"First Name\">\r\n                </div>\r\n                <div class=\"col-sm-4\">\r\n                    <label>Last Name</label>\r\n                    <input formControlName=\"clientSurname\" type=\"text\" class=\"form-control\" placeholder=\"Last Name\">\r\n                </div>\r\n                <div>\r\n                    <label>Year</label>\r\n                    <input formControlName=\"year\" type=\"text\" class=\"form-control\" placeholder=\"year\">\r\n    \r\n                </div>\r\n            </div>\r\n            <div class=\"row\">\r\n                <div class=\"col-sm-12\">\r\n                    <button [disabled]=\"carForm.invalid\" (click)=\"updateCar()\" type=\"submit\" class=\"btn btn-primary float-right\">Update car</button>\r\n                    <button (click)=\"carForm.reset()\" type=\"submit\" class=\"btn btn-default float-right\">Reset</button>\r\n                </div>\r\n            </div>\r\n        </form>\r\n        <!-- <pre> {{ carForm.value | json}} </pre> -->\r\n        <!-- <pre> Stan walidacji inputa model: {{ carForm.get('model').valid | json}} </pre>\r\n        <pre> Stan walidacji inputa plate: {{ carForm.get('plate').valid | json}} </pre> -->\r\n    </div>"
+module.exports = "<cs-header>\r\n</cs-header>\r\n<cs-sidebar></cs-sidebar>\r\n<p levels>cars /{{ car.model }}</p>\r\n\r\n<div content>\r\n    <p>Car details</p>\r\n</div>\r\n\r\n\r\n<p class=\"data-header\">Edit {{ car.model }} </p>\r\n<div class=\"data-container\">\r\n        <form [formGroup]=\"carForm\">\r\n            <div class=\"row form-group\">\r\n                <div class=\"col-sm-4\">\r\n                    <label>Model</label>\r\n                    <input formControlName=\"model\" type=\"text\" class=\"form-control\" placeholder=\"model\">\r\n                    <p *ngIf=\"!carForm.get('model').valid && carForm.get('model').dirty\" class=\"error\">This field is required!</p>\r\n                </div>\r\n                <div class=\"col-sm-4\">\r\n                    <label>Type</label>\r\n                    <input formControlName=\"type\" type=\"text\" class=\"form-control\" placeholder=\"type\">\r\n                </div>\r\n                <div class=\"col-sm-4\">\r\n                    <label>Plate</label>\r\n                    <input formControlName=\"plate\" type=\"text\" class=\"form-control\" placeholder=\"plate\">\r\n                    <p *ngIf=\"!carForm.get('plate').valid && carForm.get('plate').dirty\" class=\"error\">This field is required and must contain 3-7 characters</p>\r\n                </div>\r\n            </div>\r\n            <div class=\"row form-group\">\r\n                <div class=\"col-sm-4\">\r\n                    <label>Delivery Date</label>\r\n                    <input formControlName=\"deliveryDate\" formControlName=\"model\" type=\"text\" class=\"form-control\" placeholder=\"Delivery Date\">\r\n                </div>\r\n                <div class=\"col-sm-4\">\r\n                    <label>Deadline</label>\r\n                    <input formControlName=\"deadline\" formControlName=\"model\" type=\"text\" class=\"form-control\" placeholder=\"Deadline\">\r\n                </div>\r\n                <div class=\"col-sm-4\">\r\n                    <label>Cost</label>\r\n                    <input formControlName=\"cost\" formControlName=\"model\" type=\"text\" class=\"form-control\" placeholder=\"cost\">\r\n                </div>\r\n            </div>\r\n            <div class=\"row form-group\">\r\n                <div class=\"col-sm-4\">\r\n                    <label>Color</label>\r\n                    <input formControlName=\"color\" type=\"text\" class=\"form-control\" placeholder=\"Color\">\r\n                </div>\r\n                <div class=\"col-sm-4\">\r\n                    <label>Power</label>\r\n                    <input formControlName=\"power\" type=\"text\" class=\"form-control\" placeholder=\"Power\">\r\n                </div>\r\n                <div class=\"col-sm-4\">\r\n                        <label>Is car fully damaged</label>\r\n                        <input formControlName=\"isFullyDamaged\" type=\"checkbox\" class=\"form-control\">\r\n                </div>\r\n            </div>\r\n            <div class=\"row form-group\">\r\n                <div class=\"col-sm-4\">\r\n                    <label>First Name</label>\r\n                    <input formControlName=\"clientFirstName\" type=\"text\" class=\"form-control\" placeholder=\"First Name\">\r\n                </div>\r\n                <div class=\"col-sm-4\">\r\n                    <label>Last Name</label>\r\n                    <input formControlName=\"clientSurname\" type=\"text\" class=\"form-control\" placeholder=\"Last Name\">\r\n                </div>\r\n                <div>\r\n                    <label>Year</label>\r\n                    <input formControlName=\"year\" type=\"text\" class=\"form-control\" placeholder=\"year\">\r\n    \r\n                </div>\r\n            </div>\r\n            <div class=\"row\">\r\n                <div class=\"col-sm-12\">\r\n                    <button [disabled]=\"carForm.invalid\" (click)=\"updateCar()\" type=\"submit\" class=\"btn btn-primary float-right\">Update car</button>\r\n                    <button (click)=\"carForm.reset()\" type=\"submit\" class=\"btn btn-default float-right\">Reset</button>\r\n                </div>\r\n            </div>\r\n        </form>\r\n        <!-- <pre> {{ carForm.value | json}} </pre> -->\r\n        <!-- <pre> Stan walidacji inputa model: {{ carForm.get('model').valid | json}} </pre>\r\n        <pre> Stan walidacji inputa plate: {{ carForm.get('plate').valid | json}} </pre> -->\r\n    </div>"
 
 /***/ }),
 
@@ -222,7 +242,7 @@ module.exports = "<cs-header>\r\n    <p levels>cars /{{ car.model }}</p>\r\n\r\n
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NhcnMvY2FyLWRldGFpbHMvY2FyLWRldGFpbHMuY29tcG9uZW50Lmxlc3MifQ== */"
+module.exports = ".cars-list,\n.data-container,\n.data-header {\n  margin-left: 200px;\n  padding-top: 10px;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY2Fycy9jYXItZGV0YWlscy9EOi9Qcm9qZWt0eS9Bbmd1bGFyUHJvamVjdC9zcmMvYXBwL2NhcnMvY2FyLWRldGFpbHMvY2FyLWRldGFpbHMuY29tcG9uZW50Lmxlc3MiLCJzcmMvYXBwL2NhcnMvY2FyLWRldGFpbHMvY2FyLWRldGFpbHMuY29tcG9uZW50Lmxlc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7OztFQUdJLG1CQUFBO0VBQ0Esa0JBQUE7Q0NDSCIsImZpbGUiOiJzcmMvYXBwL2NhcnMvY2FyLWRldGFpbHMvY2FyLWRldGFpbHMuY29tcG9uZW50Lmxlc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY2Fycy1saXN0LFxuLmRhdGEtY29udGFpbmVyLFxuLmRhdGEtaGVhZGVyIHtcbiAgICBtYXJnaW4tbGVmdDogMjAwcHg7XG4gICAgcGFkZGluZy10b3A6IDEwcHg7XG59IiwiLmNhcnMtbGlzdCxcbi5kYXRhLWNvbnRhaW5lcixcbi5kYXRhLWhlYWRlciB7XG4gIG1hcmdpbi1sZWZ0OiAyMDBweDtcbiAgcGFkZGluZy10b3A6IDEwcHg7XG59XG4iXX0= */"
 
 /***/ }),
 
@@ -357,7 +377,7 @@ var CarResolve = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<cs-header>\r\n    <p levels>cars</p>\r\n\r\n    <div content>\r\n        <p>List of cars in service</p>\r\n    </div>\r\n</cs-header>\r\n\r\n<div class=\"container\">\r\n    <div class=\"row\">\r\n        <div class=\"col-sm-12\">\r\n            <table *ngIf=\"cars && cars.length > 0; else noCarsInfo\" class=\"cs-table table table-striped\">\r\n              <thead>\r\n                  <tr>\r\n                      <th>car</th>\r\n                      <th>plate</th>\r\n                      <th>delivery date</th>\r\n                      <th>deadline</th>\r\n                      <th>client</th>\r\n                      <th>cost</th>\r\n                      <th>action</th>\r\n                  </tr>\r\n              </thead>\r\n              <tbody>\r\n                  <tr *ngFor=\"let car of cars; let i = index\" (click)=\"goToCarDetails(car)\" class=\"row-car\" >\r\n                      <td csImportant [ngClass]=\"{'row-error': car.isFullyDamaged}\"> {{ car?.model | uppercase }} </td>\r\n                      <td> {{ car?.plate }} </td>\r\n                      <td> {{ car?.deliveryDate | date:'shortDate' }} </td>\r\n                      <td> {{ car?.deadline | date:'shortDate'}} </td>\r\n                      <td> {{ car?.clientFirstName }} {{ car?.clientSurname | surnameShortcut}} </td>\r\n                      <td csImportant> {{ car?.cost | currency:'PLN ':true }} </td>\r\n                      <td (click)=\"removeCar(car, $event)\"> ( X ) </td>\r\n                  </tr>\r\n              </tbody>\r\n            </table>\r\n\r\n            <ng-template #noCarsInfo>\r\n                <div class=\"no-cars-info\">\r\n                    <p>Currently no cars in service</p>\r\n                </div>\r\n            </ng-template>\r\n        </div>\r\n    </div>\r\n    <div class=\"row\">\r\n        <div class=\"col-sm-12\">\r\n            <button (click)=\"showGross()\" class=\"btn btn-primary btn-sm float-right\">\r\n                SHOW GROSS\r\n            </button>\r\n        </div>\r\n    </div>\r\n    <cs-total-cost #totalCostRef [totalCost]=\"totalCost\" (shownGross)=\"onShownGross($event)\"></cs-total-cost>\r\n\r\n    <div class=\"row\" *ngIf=\"grossCost\">\r\n        <div class=\"col-sm-12\">\r\n            <div class=\"total-cost\">\r\n                <p class=\"text-right\">TOTAL GROSS COST: {{ grossCost }} PLN</p>\r\n            </div>\r\n        </div>\r\n    </div>\r\n\r\n</div>\r\n\r\n<p class=\"data-header\">Add a new car</p>\r\n\r\n<div class=\"data-container\">\r\n    <form [formGroup]=\"carForm\">\r\n        <div class=\"row form-group\">\r\n            <div class=\"col-sm-4\">\r\n                <label>Model</label>\r\n                <input formControlName=\"model\" type=\"text\" class=\"form-control\" placeholder=\"model\">\r\n                <p *ngIf=\"!carForm.get('model').valid && carForm.get('model').dirty\" class=\"error\">This field is required!</p>\r\n            </div>\r\n            <div class=\"col-sm-4\">\r\n                <label>Type</label>\r\n                <input formControlName=\"type\" type=\"text\" class=\"form-control\" placeholder=\"type\">\r\n            </div>\r\n            <div class=\"col-sm-4\">\r\n                <label>Plate</label>\r\n                <input formControlName=\"plate\" type=\"text\" class=\"form-control\" placeholder=\"plate\">\r\n                <p *ngIf=\"!carForm.get('plate').valid && carForm.get('plate').dirty\" class=\"error\">This field is required and must contain 3-7 characters</p>\r\n            </div>\r\n        </div>\r\n        <div class=\"row form-group\">\r\n            <div class=\"col-sm-4\">\r\n                <label>Delivery Date</label>\r\n                <input formControlName=\"deliveryDate\" type=\"text\" class=\"form-control\" placeholder=\"Delivery Date\">\r\n            </div>\r\n            <div class=\"col-sm-4\">\r\n                <label>Deadline</label>\r\n                <input formControlName=\"deadline\" type=\"text\" class=\"form-control\" placeholder=\"Deadline\">\r\n            </div>\r\n            <div class=\"col-sm-4\">\r\n                <label>Cost</label>\r\n                <input formControlName=\"cost\" type=\"text\" class=\"form-control\" placeholder=\"cost\">\r\n            </div>\r\n        </div>\r\n        <div class=\"row form-group\">\r\n            <div class=\"col-sm-4\">\r\n                <label>Color</label>\r\n                <input formControlName=\"color\" type=\"text\" class=\"form-control\" placeholder=\"Color\">\r\n            </div>\r\n            <div class=\"col-sm-4\">\r\n                <label>Power</label>\r\n                <input formControlName=\"power\" type=\"text\" class=\"form-control\" placeholder=\"Power\">\r\n            </div>\r\n            <div class=\"col-sm-4\">\r\n                    <label>Is car fully damaged</label>\r\n                    <input formControlName=\"isFullyDamaged\" type=\"checkbox\" class=\"form-control\">\r\n            </div>\r\n        </div>\r\n        <div class=\"row form-group\">\r\n            <div class=\"col-sm-4\">\r\n                <label>First Name</label>\r\n                <input formControlName=\"clientFirstName\" type=\"text\" class=\"form-control\" placeholder=\"First Name\">\r\n            </div>\r\n            <div class=\"col-sm-4\">\r\n                <label>Last Name</label>\r\n                <input formControlName=\"clientSurname\" type=\"text\" class=\"form-control\" placeholder=\"Last Name\">\r\n            </div>\r\n            <div>\r\n                <label>Year</label>\r\n                <input formControlName=\"year\" type=\"text\" class=\"form-control\" placeholder=\"year\">\r\n\r\n            </div>\r\n        </div>\r\n        <div class=\"row\">\r\n            <div class=\"col-sm-12\">\r\n                <button [disabled]=\"carForm.invalid\" (click)=\"addCar()\" type=\"submit\" class=\"btn btn-primary float-right\">Add car</button>\r\n                <button (click)=\"carForm.reset()\" type=\"submit\" class=\"btn btn-default float-right\">Reset</button>\r\n            </div>\r\n        </div>\r\n    </form>\r\n    <!-- <pre> {{ carForm.value | json}} </pre> -->\r\n    <!-- <pre> Stan walidacji inputa model: {{ carForm.get('model').valid | json}} </pre>\r\n    <pre> Stan walidacji inputa plate: {{ carForm.get('plate').valid | json}} </pre> -->\r\n</div>"
+module.exports = "<cs-header>\r\n</cs-header>\r\n<cs-sidebar></cs-sidebar>\r\n<div class=\"container cars-list\">\r\n  <div class=\"row\">\r\n    <div class=\"col-sm-12\">\r\n      <table *ngIf=\"cars && cars.length > 0; else noCarsInfo\" class=\"cs-table table table-striped\">\r\n        <thead>\r\n          <tr>\r\n            <th>car</th>\r\n            <th>plate</th>\r\n            <th>delivery date</th>\r\n            <th>deadline</th>\r\n            <th>client</th>\r\n            <th>cost</th>\r\n            <th>action</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let car of cars; let i = index\" (click)=\"goToCarDetails(car)\" class=\"row-car\">\r\n            <td csImportant [ngClass]=\"{'row-error': car.isFullyDamaged}\"> {{ car?.model | uppercase }} </td>\r\n            <td> {{ car?.plate }} </td>\r\n            <td> {{ car?.deliveryDate | date:'shortDate' }} </td>\r\n            <td> {{ car?.deadline | date:'shortDate'}} </td>\r\n            <td> {{ car?.clientFirstName }} {{ car?.clientSurname | surnameShortcut}} </td>\r\n            <td csImportant> {{ car?.cost | currency:'PLN ':true }} </td>\r\n            <td (click)=\"removeCar(car, $event)\"> ( X ) </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n\r\n      <ng-template #noCarsInfo>\r\n        <div class=\"no-cars-info\">\r\n          <p>Currently no cars in service</p>\r\n        </div>\r\n      </ng-template>\r\n    </div>\r\n  </div>\r\n  <div class=\"row\">\r\n    <div class=\"col-sm-12\">\r\n      <button (click)=\"showGross()\" class=\"btn btn-primary btn-sm float-right\">\r\n        SHOW GROSS\r\n      </button>\r\n    </div>\r\n  </div>\r\n  <cs-total-cost #totalCostRef [totalCost]=\"totalCost\" (shownGross)=\"onShownGross($event)\"></cs-total-cost>\r\n\r\n  <div class=\"row\" *ngIf=\"grossCost\">\r\n    <div class=\"col-sm-12\">\r\n      <div class=\"total-cost\">\r\n        <p class=\"text-right\">TOTAL GROSS COST: {{ grossCost }} PLN</p>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n</div>\r\n\r\n\r\n<div class=\"data-container\">\r\n  <p class=\"data-header\">Add a new car</p>\r\n  <form [formGroup]=\"carForm\">\r\n    <div class=\"row form-group\">\r\n      <div class=\"col-sm-4\">\r\n        <label>Model</label>\r\n        <input formControlName=\"model\" type=\"text\" class=\"form-control\" placeholder=\"model\">\r\n        <p *ngIf=\"!carForm.get('model').valid && carForm.get('model').dirty\" class=\"error\">This field is required!</p>\r\n      </div>\r\n      <div class=\"col-sm-4\">\r\n        <label>Type</label>\r\n        <input formControlName=\"type\" type=\"text\" class=\"form-control\" placeholder=\"type\">\r\n      </div>\r\n      <div class=\"col-sm-4\">\r\n        <label>Plate</label>\r\n        <input formControlName=\"plate\" type=\"text\" class=\"form-control\" placeholder=\"plate\">\r\n        <p *ngIf=\"!carForm.get('plate').valid && carForm.get('plate').dirty\" class=\"error\">This field is required and\r\n          must contain 3-7 characters</p>\r\n      </div>\r\n    </div>\r\n    <div class=\"row form-group\">\r\n      <div class=\"col-sm-4\">\r\n        <label>Delivery Date</label>\r\n        <input formControlName=\"deliveryDate\" type=\"text\" class=\"form-control\" placeholder=\"Delivery Date\">\r\n      </div>\r\n      <div class=\"col-sm-4\">\r\n        <label>Deadline</label>\r\n        <input formControlName=\"deadline\" type=\"text\" class=\"form-control\" placeholder=\"Deadline\">\r\n      </div>\r\n      <div class=\"col-sm-4\">\r\n        <label>Cost</label>\r\n        <input formControlName=\"cost\" type=\"text\" class=\"form-control\" placeholder=\"cost\">\r\n      </div>\r\n    </div>\r\n    <div class=\"row form-group\">\r\n      <div class=\"col-sm-4\">\r\n        <label>Color</label>\r\n        <input formControlName=\"color\" type=\"text\" class=\"form-control\" placeholder=\"Color\">\r\n      </div>\r\n      <div class=\"col-sm-4\">\r\n        <label>Power</label>\r\n        <input formControlName=\"power\" type=\"text\" class=\"form-control\" placeholder=\"Power\">\r\n      </div>\r\n      <div class=\"col-sm-4\">\r\n        <label>Is car fully damaged</label>\r\n        <input formControlName=\"isFullyDamaged\" type=\"checkbox\" class=\"form-control\">\r\n      </div>\r\n    </div>\r\n    <div class=\"row form-group\">\r\n      <div class=\"col-sm-4\">\r\n        <label>First Name</label>\r\n        <input formControlName=\"clientFirstName\" type=\"text\" class=\"form-control\" placeholder=\"First Name\">\r\n      </div>\r\n      <div class=\"col-sm-4\">\r\n        <label>Last Name</label>\r\n        <input formControlName=\"clientSurname\" type=\"text\" class=\"form-control\" placeholder=\"Last Name\">\r\n      </div>\r\n      <div>\r\n        <label>Year</label>\r\n        <input formControlName=\"year\" type=\"text\" class=\"form-control\" placeholder=\"year\">\r\n\r\n      </div>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"col-sm-12\">\r\n        <button [disabled]=\"carForm.invalid\" (click)=\"addCar()\" type=\"submit\" class=\"btn btn-primary float-right\">Add\r\n          car</button>\r\n        <button (click)=\"carForm.reset()\" type=\"submit\" class=\"btn btn-default float-right\">Reset</button>\r\n      </div>\r\n    </div>\r\n  </form>\r\n  <!-- <pre> {{ carForm.value | json}} </pre> -->\r\n  <!-- <pre> Stan walidacji inputa model: {{ carForm.get('model').valid | json}} </pre>\r\n    <pre> Stan walidacji inputa plate: {{ carForm.get('plate').valid | json}} </pre> -->\r\n</div>"
 
 /***/ }),
 
@@ -368,7 +388,7 @@ module.exports = "<cs-header>\r\n    <p levels>cars</p>\r\n\r\n    <div content>
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".total-cost,\n.no-cars-info {\n  text-align: center;\n  font-size: 18px;\n  text-transform: uppercase;\n  font-weight: 700;\n  color: #1a3162;\n  padding: 20px;\n  background: #ffffff;\n}\n.row-car {\n  cursor: pointer;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY2Fycy9jYXJzLWxpc3QvRDovUHJvamVrdHkvQW5ndWxhclByb2plY3Qvc3JjL2FwcC9jYXJzL2NhcnMtbGlzdC9jYXJzLWxpc3QuY29tcG9uZW50Lmxlc3MiLCJzcmMvYXBwL2NhcnMvY2Fycy1saXN0L2NhcnMtbGlzdC5jb21wb25lbnQubGVzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFDQTs7RUFFSSxtQkFBQTtFQUNBLGdCQUFBO0VBQ0EsMEJBQUE7RUFDQSxpQkFBQTtFQUNBLGVBQUE7RUFDQSxjQUFBO0VBQ0Esb0JBQUE7Q0NBSDtBREdEO0VBQ0ksZ0JBQUE7Q0NESCIsImZpbGUiOiJzcmMvYXBwL2NhcnMvY2Fycy1saXN0L2NhcnMtbGlzdC5jb21wb25lbnQubGVzcyIsInNvdXJjZXNDb250ZW50IjpbIkBpbXBvcnQgJy4uLy4uLy4uL2Fzc2V0cy9zdHlsZXMvdmFyaWFibGVzJztcbi50b3RhbC1jb3N0LFxuLm5vLWNhcnMtaW5mbyB7XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgIGZvbnQtc2l6ZTogMThweDtcbiAgICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlO1xuICAgIGZvbnQtd2VpZ2h0OiA3MDA7XG4gICAgY29sb3I6IEBibHVlO1xuICAgIHBhZGRpbmc6IDIwcHg7XG4gICAgYmFja2dyb3VuZDogQHdoaXRlO1xufVxuXG4ucm93LWNhciB7XG4gICAgY3Vyc29yOiBwb2ludGVyO1xufSIsIi50b3RhbC1jb3N0LFxuLm5vLWNhcnMtaW5mbyB7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgZm9udC1zaXplOiAxOHB4O1xuICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlO1xuICBmb250LXdlaWdodDogNzAwO1xuICBjb2xvcjogIzFhMzE2MjtcbiAgcGFkZGluZzogMjBweDtcbiAgYmFja2dyb3VuZDogI2ZmZmZmZjtcbn1cbi5yb3ctY2FyIHtcbiAgY3Vyc29yOiBwb2ludGVyO1xufVxuIl19 */"
+module.exports = ".total-cost,\n.no-cars-info {\n  text-align: center;\n  font-size: 18px;\n  text-transform: uppercase;\n  font-weight: 700;\n  color: #1a3162;\n  padding: 20px;\n  background: #ffffff;\n}\n.row-car {\n  cursor: pointer;\n}\n.cars-list,\n.data-container,\n.data-header {\n  margin-left: 200px;\n  padding-top: 30px;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY2Fycy9jYXJzLWxpc3QvRDovUHJvamVrdHkvQW5ndWxhclByb2plY3Qvc3JjL2FwcC9jYXJzL2NhcnMtbGlzdC9jYXJzLWxpc3QuY29tcG9uZW50Lmxlc3MiLCJzcmMvYXBwL2NhcnMvY2Fycy1saXN0L2NhcnMtbGlzdC5jb21wb25lbnQubGVzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFDQTs7RUFFSSxtQkFBQTtFQUNBLGdCQUFBO0VBQ0EsMEJBQUE7RUFDQSxpQkFBQTtFQUNBLGVBQUE7RUFDQSxjQUFBO0VBQ0Esb0JBQUE7Q0NBSDtBREdEO0VBQ0ksZ0JBQUE7Q0NESDtBRElEOzs7RUFHSSxtQkFBQTtFQUNBLGtCQUFBO0NDRkgiLCJmaWxlIjoic3JjL2FwcC9jYXJzL2NhcnMtbGlzdC9jYXJzLWxpc3QuY29tcG9uZW50Lmxlc3MiLCJzb3VyY2VzQ29udGVudCI6WyJAaW1wb3J0ICcuLi8uLi8uLi9hc3NldHMvc3R5bGVzL3ZhcmlhYmxlcyc7XG4udG90YWwtY29zdCxcbi5uby1jYXJzLWluZm8ge1xuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgICBmb250LXNpemU6IDE4cHg7XG4gICAgdGV4dC10cmFuc2Zvcm06IHVwcGVyY2FzZTtcbiAgICBmb250LXdlaWdodDogNzAwO1xuICAgIGNvbG9yOiBAYmx1ZTtcbiAgICBwYWRkaW5nOiAyMHB4O1xuICAgIGJhY2tncm91bmQ6IEB3aGl0ZTtcbn1cblxuLnJvdy1jYXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbn1cblxuLmNhcnMtbGlzdCxcbi5kYXRhLWNvbnRhaW5lcixcbi5kYXRhLWhlYWRlciB7XG4gICAgbWFyZ2luLWxlZnQ6IDIwMHB4O1xuICAgIHBhZGRpbmctdG9wOiAzMHB4O1xufSIsIi50b3RhbC1jb3N0LFxuLm5vLWNhcnMtaW5mbyB7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgZm9udC1zaXplOiAxOHB4O1xuICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlO1xuICBmb250LXdlaWdodDogNzAwO1xuICBjb2xvcjogIzFhMzE2MjtcbiAgcGFkZGluZzogMjBweDtcbiAgYmFja2dyb3VuZDogI2ZmZmZmZjtcbn1cbi5yb3ctY2FyIHtcbiAgY3Vyc29yOiBwb2ludGVyO1xufVxuLmNhcnMtbGlzdCxcbi5kYXRhLWNvbnRhaW5lcixcbi5kYXRhLWhlYWRlciB7XG4gIG1hcmdpbi1sZWZ0OiAyMDBweDtcbiAgcGFkZGluZy10b3A6IDMwcHg7XG59XG4iXX0= */"
 
 /***/ }),
 
@@ -555,12 +575,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _car_resolve_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./car-resolve.service */ "./src/app/cars/car-resolve.service.ts");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _core_module_core_module__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../core-module/core-module */ "./src/app/core-module/core-module.ts");
+/* harmony import */ var _material_material_module__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../material/material.module */ "./src/app/material/material.module.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
 
 
 
@@ -578,8 +602,10 @@ var CarsModule = /** @class */ (function () {
             imports: [
                 _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
                 _shared_module_shared_module__WEBPACK_IMPORTED_MODULE_4__["SharedModule"],
+                _core_module_core_module__WEBPACK_IMPORTED_MODULE_9__["CoreModule"],
                 _angular_router__WEBPACK_IMPORTED_MODULE_6__["RouterModule"],
-                _angular_forms__WEBPACK_IMPORTED_MODULE_8__["ReactiveFormsModule"]
+                _angular_forms__WEBPACK_IMPORTED_MODULE_8__["ReactiveFormsModule"],
+                _material_material_module__WEBPACK_IMPORTED_MODULE_10__["MaterialModule"]
             ],
             exports: [_cars_list_cars_list_component__WEBPACK_IMPORTED_MODULE_2__["CarsListComponent"]],
             providers: [_car_resolve_service__WEBPACK_IMPORTED_MODULE_7__["CarResolve"]],
@@ -771,6 +797,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
 /* harmony import */ var _sidebar_sidebar_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./sidebar/sidebar.component */ "./src/app/core-module/sidebar/sidebar.component.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _material_material_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../material/material.module */ "./src/app/material/material.module.ts");
+/* harmony import */ var _shared_module_shared_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../shared-module/shared-module */ "./src/app/shared-module/shared-module.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -781,20 +809,150 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
+
 var CoreModule = /** @class */ (function () {
     function CoreModule() {
     }
     CoreModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
-            exports: [_sidebar_sidebar_component__WEBPACK_IMPORTED_MODULE_2__["SidebarComponent"]],
-            declarations: [_sidebar_sidebar_component__WEBPACK_IMPORTED_MODULE_2__["SidebarComponent"]],
+            exports: [_sidebar_sidebar_component__WEBPACK_IMPORTED_MODULE_2__["SidebarComponent"],],
+            declarations: [_sidebar_sidebar_component__WEBPACK_IMPORTED_MODULE_2__["SidebarComponent"],],
             imports: [
+                _shared_module_shared_module__WEBPACK_IMPORTED_MODULE_5__["SharedModule"],
                 _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
-                _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"]
+                _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"],
+                _material_material_module__WEBPACK_IMPORTED_MODULE_4__["MaterialModule"]
             ]
         })
     ], CoreModule);
     return CoreModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/core-module/dashboard/dashboard.component.html":
+/*!****************************************************************!*\
+  !*** ./src/app/core-module/dashboard/dashboard.component.html ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<cs-header>\r\n</cs-header>\r\n\r\n<div class=\"container\">\r\n  <div class=\"row\">\r\n    <div class=\"col\">\r\n       <div class=\"img\" [routerLink]=\"['/cars']\">\r\n            <div class=\"img-text text-center\">Car Service</div>\r\n            <img src=\"/angular-project/assets/images/car_service.jpg\" alt=\"car service\" class=\"img-thumbnail img-fluid rounded \">\r\n        </div>\r\n    </div>\r\n    <div class=\"col\">\r\n        <div class=\"img\" [routerLink]=\"['/flights']\">\r\n                <div class=\"img-text text-center\">Flights</div>\r\n            <img src=\"/angular-project/assets/images/flights.jpg\" alt=\" flights\" class=\"img-thumbnail img-fluid rounded \">\r\n        </div>\r\n    </div>\r\n  </div>\r\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/core-module/dashboard/dashboard.component.less":
+/*!****************************************************************!*\
+  !*** ./src/app/core-module/dashboard/dashboard.component.less ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".img {\n  margin: 40px;\n  margin-top: 120px;\n  background: black;\n}\n.img .img-thumbnail {\n  width: 450px;\n  height: 200px;\n  cursor: pointer;\n  display: block;\n  width: 100%;\n  height: auto;\n  transition: opacity 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);\n  -webkit-transform: translate3d(0, 0, 0);\n  transform: translate3d(0, 0, 0);\n  opacity: 0.7;\n  transition: all 0.25s ease-in-out;\n}\n.img .img-thumbnail:hover {\n  border: 1px solid black;\n  opacity: 0.4;\n  transition: all 0.25s ease-in-out;\n}\n.img-text {\n  font-size: 25px;\n  font-weight: bold;\n  background: whitesmoke;\n  border: 1px solid black;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29yZS1tb2R1bGUvZGFzaGJvYXJkL0Q6L1Byb2pla3R5L0FuZ3VsYXJQcm9qZWN0L3NyYy9hcHAvY29yZS1tb2R1bGUvZGFzaGJvYXJkL2Rhc2hib2FyZC5jb21wb25lbnQubGVzcyIsInNyYy9hcHAvY29yZS1tb2R1bGUvZGFzaGJvYXJkL2Rhc2hib2FyZC5jb21wb25lbnQubGVzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGFBQUE7RUFDQSxrQkFBQTtFQUNBLGtCQUFBO0NDQ0g7QURKRDtFQU9RLGFBQUE7RUFDQSxjQUFBO0VBQ0EsZ0JBQUE7RUFDQSxlQUFBO0VBQ0EsWUFBQTtFQUNBLGFBQUE7RUFFQSxpRUFBQTtFQUNBLHdDQUFBO0VBQ0EsZ0NBQUE7RUFDQSxhQUFBO0VBQ0Esa0NBQUE7Q0NBUDtBRElEO0VBQ0ksd0JBQUE7RUFDQSxhQUFBO0VBQ0Esa0NBQUE7Q0NGSDtBREtEO0VBQ0ksZ0JBQUE7RUFDQSxrQkFBQTtFQUNBLHVCQUFBO0VBQ0Esd0JBQUE7Q0NISCIsImZpbGUiOiJzcmMvYXBwL2NvcmUtbW9kdWxlL2Rhc2hib2FyZC9kYXNoYm9hcmQuY29tcG9uZW50Lmxlc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuaW1nIHtcbiAgICBtYXJnaW46IDQwcHg7XG4gICAgbWFyZ2luLXRvcDogMTIwcHg7XG4gICAgYmFja2dyb3VuZDogYmxhY2s7XG5cblxuICAgIC5pbWctdGh1bWJuYWlsIHtcbiAgICAgICAgd2lkdGg6IDQ1MHB4O1xuICAgICAgICBoZWlnaHQ6IDIwMHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGRpc3BsYXk6IGJsb2NrO1xuICAgICAgICB3aWR0aDogMTAwJTtcbiAgICAgICAgaGVpZ2h0OiBhdXRvO1xuICAgICAgICAtd2Via2l0LXRyYW5zaXRpb246IG9wYWNpdHkgMC41cyBjdWJpYy1iZXppZXIoMC40NTUsIDAuMDMsIDAuNTE1LCAwLjk1NSk7XG4gICAgICAgIHRyYW5zaXRpb246IG9wYWNpdHkgMC41cyBjdWJpYy1iZXppZXIoMC40NTUsIDAuMDMsIDAuNTE1LCAwLjk1NSk7XG4gICAgICAgIC13ZWJraXQtdHJhbnNmb3JtOiB0cmFuc2xhdGUzZCgwLCAwLCAwKTtcbiAgICAgICAgdHJhbnNmb3JtOiB0cmFuc2xhdGUzZCgwLCAwLCAwKTtcbiAgICAgICAgb3BhY2l0eTogLjc7XG4gICAgICAgIHRyYW5zaXRpb246IGFsbCAuMjVzIGVhc2UtaW4tb3V0O1xuICAgIH1cbn1cblxuLmltZyAuaW1nLXRodW1ibmFpbDpob3ZlciB7XG4gICAgYm9yZGVyOiAxcHggc29saWQgYmxhY2s7XG4gICAgb3BhY2l0eTogLjQ7XG4gICAgdHJhbnNpdGlvbjogYWxsIC4yNXMgZWFzZS1pbi1vdXQ7XG59XG5cbi5pbWctdGV4dCB7XG4gICAgZm9udC1zaXplOiAyNXB4O1xuICAgIGZvbnQtd2VpZ2h0OiBib2xkO1xuICAgIGJhY2tncm91bmQ6IHdoaXRlc21va2U7XG4gICAgYm9yZGVyOiAxcHggc29saWQgYmxhY2s7XG5cbn0iLCIuaW1nIHtcbiAgbWFyZ2luOiA0MHB4O1xuICBtYXJnaW4tdG9wOiAxMjBweDtcbiAgYmFja2dyb3VuZDogYmxhY2s7XG59XG4uaW1nIC5pbWctdGh1bWJuYWlsIHtcbiAgd2lkdGg6IDQ1MHB4O1xuICBoZWlnaHQ6IDIwMHB4O1xuICBjdXJzb3I6IHBvaW50ZXI7XG4gIGRpc3BsYXk6IGJsb2NrO1xuICB3aWR0aDogMTAwJTtcbiAgaGVpZ2h0OiBhdXRvO1xuICAtd2Via2l0LXRyYW5zaXRpb246IG9wYWNpdHkgMC41cyBjdWJpYy1iZXppZXIoMC40NTUsIDAuMDMsIDAuNTE1LCAwLjk1NSk7XG4gIHRyYW5zaXRpb246IG9wYWNpdHkgMC41cyBjdWJpYy1iZXppZXIoMC40NTUsIDAuMDMsIDAuNTE1LCAwLjk1NSk7XG4gIC13ZWJraXQtdHJhbnNmb3JtOiB0cmFuc2xhdGUzZCgwLCAwLCAwKTtcbiAgdHJhbnNmb3JtOiB0cmFuc2xhdGUzZCgwLCAwLCAwKTtcbiAgb3BhY2l0eTogMC43O1xuICB0cmFuc2l0aW9uOiBhbGwgMC4yNXMgZWFzZS1pbi1vdXQ7XG59XG4uaW1nIC5pbWctdGh1bWJuYWlsOmhvdmVyIHtcbiAgYm9yZGVyOiAxcHggc29saWQgYmxhY2s7XG4gIG9wYWNpdHk6IDAuNDtcbiAgdHJhbnNpdGlvbjogYWxsIDAuMjVzIGVhc2UtaW4tb3V0O1xufVxuLmltZy10ZXh0IHtcbiAgZm9udC1zaXplOiAyNXB4O1xuICBmb250LXdlaWdodDogYm9sZDtcbiAgYmFja2dyb3VuZDogd2hpdGVzbW9rZTtcbiAgYm9yZGVyOiAxcHggc29saWQgYmxhY2s7XG59XG4iXX0= */"
+
+/***/ }),
+
+/***/ "./src/app/core-module/dashboard/dashboard.component.ts":
+/*!**************************************************************!*\
+  !*** ./src/app/core-module/dashboard/dashboard.component.ts ***!
+  \**************************************************************/
+/*! exports provided: DashboardComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DashboardComponent", function() { return DashboardComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var DashboardComponent = /** @class */ (function () {
+    function DashboardComponent() {
+    }
+    DashboardComponent.prototype.ngOnInit = function () {
+    };
+    DashboardComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'cs-dashboard',
+            template: __webpack_require__(/*! ./dashboard.component.html */ "./src/app/core-module/dashboard/dashboard.component.html"),
+            styles: [__webpack_require__(/*! ./dashboard.component.less */ "./src/app/core-module/dashboard/dashboard.component.less")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], DashboardComponent);
+    return DashboardComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/core-module/login/login.component.html":
+/*!********************************************************!*\
+  !*** ./src/app/core-module/login/login.component.html ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  login works!\n</p>\n"
+
+/***/ }),
+
+/***/ "./src/app/core-module/login/login.component.less":
+/*!********************************************************!*\
+  !*** ./src/app/core-module/login/login.component.less ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvcmUtbW9kdWxlL2xvZ2luL2xvZ2luLmNvbXBvbmVudC5sZXNzIn0= */"
+
+/***/ }),
+
+/***/ "./src/app/core-module/login/login.component.ts":
+/*!******************************************************!*\
+  !*** ./src/app/core-module/login/login.component.ts ***!
+  \******************************************************/
+/*! exports provided: LoginComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoginComponent", function() { return LoginComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var LoginComponent = /** @class */ (function () {
+    function LoginComponent() {
+    }
+    LoginComponent.prototype.ngOnInit = function () {
+    };
+    LoginComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'cs-login',
+            template: __webpack_require__(/*! ./login.component.html */ "./src/app/core-module/login/login.component.html"),
+            styles: [__webpack_require__(/*! ./login.component.less */ "./src/app/core-module/login/login.component.less")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], LoginComponent);
+    return LoginComponent;
 }());
 
 
@@ -808,7 +966,7 @@ var CoreModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"sidebar\">\r\n  <!-- <img class=\"logo\" src=\"../../../assets/logo.png\" alt=\"logo\"> -->\r\n  <img class=\"logo\" src=\"/angular-project/assets/logo.png\" alt=\"logo\">\r\n  <nav>\r\n    <ul>\r\n      <li [routerLink]=\"['/cars']\" [routerLinkActive]=\"'active'\">cars</li>\r\n      <li>items 1</li>\r\n      <li>items 2</li>\r\n      <li>items 3</li>\r\n    </ul>\r\n  </nav>\r\n</div>"
+module.exports = "<div class=\"sidebar\">\r\n  <!-- <img class=\"logo\" src=\"../../../assets/logo.png\" alt=\"logo\"> -->\r\n  <img class=\"logo\" src=\"/angular-project/assets/logo.png\" alt=\"logo\">\r\n  <nav>\r\n    <ul>\r\n      <li [routerLink]=\"['/cars']\" [routerLinkActive]=\"'active'\">cars</li>\r\n      <li [routerLink]=\"['/cars']\" [routerLinkActive]=\"'active'\">add cars</li>\r\n      <li [routerLink]=\"['/flights']\" [routerLinkActive]=\"'active'\">flights</li>\r\n      <li>items 3</li>\r\n    </ul>\r\n  </nav>\r\n</div>"
 
 /***/ }),
 
@@ -858,6 +1016,250 @@ var SidebarComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [])
     ], SidebarComponent);
     return SidebarComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/flights/flight-card/flight-card.component.html":
+/*!****************************************************************!*\
+  !*** ./src/app/flights/flight-card/flight-card.component.html ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"card-container\">\r\n  <div class=\"shadow card-content\">\r\n    <div class=\"row\">\r\n      <div class=\"col\">\r\n        <p class=\"origin\">{{ flight.origin }} </p>\r\n        <p class=\"destination\">{{ flight.destination }}</p>\r\n      </div>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"col\">\r\n        <p class=\"time\">{{ flight.departureTime }} - {{ flight.returnTime }}</p>\r\n      </div>\r\n    </div>\r\n      <mat-icon>airplanemode_active</mat-icon>\r\n  </div>\r\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/flights/flight-card/flight-card.component.less":
+/*!****************************************************************!*\
+  !*** ./src/app/flights/flight-card/flight-card.component.less ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2ZsaWdodHMvZmxpZ2h0LWNhcmQvZmxpZ2h0LWNhcmQuY29tcG9uZW50Lmxlc3MifQ== */"
+
+/***/ }),
+
+/***/ "./src/app/flights/flight-card/flight-card.component.ts":
+/*!**************************************************************!*\
+  !*** ./src/app/flights/flight-card/flight-card.component.ts ***!
+  \**************************************************************/
+/*! exports provided: FlightCardComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FlightCardComponent", function() { return FlightCardComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var FlightCardComponent = /** @class */ (function () {
+    function FlightCardComponent() {
+    }
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", Object)
+    ], FlightCardComponent.prototype, "flight", void 0);
+    FlightCardComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'cs-flight-card',
+            template: __webpack_require__(/*! ./flight-card.component.html */ "./src/app/flights/flight-card/flight-card.component.html"),
+            styles: [__webpack_require__(/*! ./flight-card.component.less */ "./src/app/flights/flight-card/flight-card.component.less")]
+        })
+    ], FlightCardComponent);
+    return FlightCardComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/flights/flights.component.html":
+/*!************************************************!*\
+  !*** ./src/app/flights/flights.component.html ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<cs-header>\r\n</cs-header>\r\n\r\n<div class=\"row flight-container\">\r\n  <div class=\"col-sm-4\" *ngFor=\"let flight of flights$ | async\">\r\n    <cs-flight-card [flight]=\"flight\"></cs-flight-card>\r\n  </div>\r\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/flights/flights.component.less":
+/*!************************************************!*\
+  !*** ./src/app/flights/flights.component.less ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2ZsaWdodHMvZmxpZ2h0cy5jb21wb25lbnQubGVzcyJ9 */"
+
+/***/ }),
+
+/***/ "./src/app/flights/flights.component.ts":
+/*!**********************************************!*\
+  !*** ./src/app/flights/flights.component.ts ***!
+  \**********************************************/
+/*! exports provided: FlightsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FlightsComponent", function() { return FlightsComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _flights_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./flights.service */ "./src/app/flights/flights.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var FlightsComponent = /** @class */ (function () {
+    function FlightsComponent(flightsService) {
+        this.flightsService = flightsService;
+        this.flights$ = this.flightsService.getFlights();
+    }
+    FlightsComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'cs-flights',
+            template: __webpack_require__(/*! ./flights.component.html */ "./src/app/flights/flights.component.html"),
+            styles: [__webpack_require__(/*! ./flights.component.less */ "./src/app/flights/flights.component.less")]
+        }),
+        __metadata("design:paramtypes", [_flights_service__WEBPACK_IMPORTED_MODULE_1__["FlightsService"]])
+    ], FlightsComponent);
+    return FlightsComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/flights/flights.module.ts":
+/*!*******************************************!*\
+  !*** ./src/app/flights/flights.module.ts ***!
+  \*******************************************/
+/*! exports provided: FlightsModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FlightsModule", function() { return FlightsModule; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var _flight_card_flight_card_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./flight-card/flight-card.component */ "./src/app/flights/flight-card/flight-card.component.ts");
+/* harmony import */ var _material_material_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../material/material.module */ "./src/app/material/material.module.ts");
+/* harmony import */ var _flights_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./flights.component */ "./src/app/flights/flights.component.ts");
+/* harmony import */ var _core_module_core_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../core-module/core-module */ "./src/app/core-module/core-module.ts");
+/* harmony import */ var _shared_module_shared_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../shared-module/shared-module */ "./src/app/shared-module/shared-module.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+
+
+
+var FlightsModule = /** @class */ (function () {
+    function FlightsModule() {
+    }
+    FlightsModule = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
+            declarations: [_flights_component__WEBPACK_IMPORTED_MODULE_4__["FlightsComponent"], _flight_card_flight_card_component__WEBPACK_IMPORTED_MODULE_2__["FlightCardComponent"]],
+            imports: [
+                _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
+                _material_material_module__WEBPACK_IMPORTED_MODULE_3__["MaterialModule"],
+                _shared_module_shared_module__WEBPACK_IMPORTED_MODULE_6__["SharedModule"],
+                _core_module_core_module__WEBPACK_IMPORTED_MODULE_5__["CoreModule"]
+            ],
+            exports: [_flights_component__WEBPACK_IMPORTED_MODULE_4__["FlightsComponent"], _flight_card_flight_card_component__WEBPACK_IMPORTED_MODULE_2__["FlightCardComponent"]]
+        })
+    ], FlightsModule);
+    return FlightsModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/flights/flights.service.ts":
+/*!********************************************!*\
+  !*** ./src/app/flights/flights.service.ts ***!
+  \********************************************/
+/*! exports provided: FlightsService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FlightsService", function() { return FlightsService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var angularfire2_database__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! angularfire2/database */ "./node_modules/angularfire2/database/index.js");
+/* harmony import */ var angularfire2_database__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(angularfire2_database__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+var __assign = (undefined && undefined.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var FlightsService = /** @class */ (function () {
+    function FlightsService(db) {
+        this.db = db;
+        this.API_URL = '/flights';
+    }
+    FlightsService.prototype.getFlights = function () {
+        var _this = this;
+        return this.db.list(this.API_URL).snapshotChanges()
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (response) { return response.map(function (flight) { return _this.assignKey(flight); }); }));
+    };
+    FlightsService.prototype.assignKey = function (flight) {
+        return __assign({}, flight.payload.val(), { key: flight.key });
+    };
+    FlightsService = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+            providedIn: 'root'
+        }),
+        __metadata("design:paramtypes", [angularfire2_database__WEBPACK_IMPORTED_MODULE_1__["AngularFireDatabase"]])
+    ], FlightsService);
+    return FlightsService;
 }());
 
 
@@ -959,7 +1361,7 @@ var ImportantDirective = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"header\">\r\n  <div class=\"levels\">\r\n      <ng-content select=\"[levels]\"></ng-content>\r\n  </div>\r\n\r\n  <div class=\"other content\">\r\n      <ng-content select=\"[content]\"></ng-content>\r\n  </div>\r\n</div>"
+module.exports = "<mat-toolbar color=\"primary\">\r\n    <div class=\"container\">\r\n        <mat-icon class=\"logout-icon float-right\">power_settings_new</mat-icon>\r\n        <mat-icon class=\"home-icon float-right\" routerLink=\"/dashboard\">home</mat-icon>\r\n        <span class=\"user-login float-right\">Hello, John</span>\r\n    </div>\r\n</mat-toolbar>\r\n<div class=\"container\">\r\n        <router-outlet></router-outlet>\r\n</div>"
 
 /***/ }),
 
@@ -970,7 +1372,7 @@ module.exports = "<div class=\"header\">\r\n  <div class=\"levels\">\r\n      <n
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".header {\n  background: #ffffff;\n  padding: 15px;\n  margin-bottom: 15px;\n}\n.header .levels {\n  font-size: 24px;\n  font-weight: 700;\n  color: #1a3162;\n  text-transform: uppercase;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2hhcmVkLW1vZHVsZS9oZWFkZXIvRDovUHJvamVrdHkvQW5ndWxhclByb2plY3Qvc3JjL2FwcC9zaGFyZWQtbW9kdWxlL2hlYWRlci9oZWFkZXIuY29tcG9uZW50Lmxlc3MiLCJzcmMvYXBwL3NoYXJlZC1tb2R1bGUvaGVhZGVyL2hlYWRlci5jb21wb25lbnQubGVzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFFQTtFQUNJLG9CQUFBO0VBQ0EsY0FBQTtFQUNBLG9CQUFBO0NDREg7QURGRDtFQU1RLGdCQUFBO0VBQ0EsaUJBQUE7RUFDQSxlQUFBO0VBQ0EsMEJBQUE7Q0NEUCIsImZpbGUiOiJzcmMvYXBwL3NoYXJlZC1tb2R1bGUvaGVhZGVyL2hlYWRlci5jb21wb25lbnQubGVzcyIsInNvdXJjZXNDb250ZW50IjpbIkBpbXBvcnQgXCIuLi8uLi8uLi9hc3NldHMvc3R5bGVzL3ZhcmlhYmxlc1wiO1xuXG4uaGVhZGVyIHtcbiAgICBiYWNrZ3JvdW5kOiBAd2hpdGU7XG4gICAgcGFkZGluZzogMTVweDtcbiAgICBtYXJnaW4tYm90dG9tOiAxNXB4O1xuXG4gICAgLmxldmVscyB7XG4gICAgICAgIGZvbnQtc2l6ZTogMjRweDtcbiAgICAgICAgZm9udC13ZWlnaHQ6IDcwMDtcbiAgICAgICAgY29sb3I6IEBibHVlO1xuICAgICAgICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlO1xuICAgIH1cbn1cblxuIiwiLmhlYWRlciB7XG4gIGJhY2tncm91bmQ6ICNmZmZmZmY7XG4gIHBhZGRpbmc6IDE1cHg7XG4gIG1hcmdpbi1ib3R0b206IDE1cHg7XG59XG4uaGVhZGVyIC5sZXZlbHMge1xuICBmb250LXNpemU6IDI0cHg7XG4gIGZvbnQtd2VpZ2h0OiA3MDA7XG4gIGNvbG9yOiAjMWEzMTYyO1xuICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlO1xufVxuIl19 */"
+module.exports = ".header {\n  background: #ffffff;\n  padding: 15px;\n  margin-bottom: 15px;\n}\n.header .levels {\n  font-size: 24px;\n  font-weight: 700;\n  color: #1a3162;\n  text-transform: uppercase;\n}\n.logout-icon {\n  font-size: 35px;\n  cursor: pointer;\n  padding: 4px;\n}\n.home-icon {\n  font-size: 35px;\n  color: white;\n  cursor: pointer;\n  padding: 4px;\n  margin-right: 15px;\n}\n.user-login {\n  font-size: 15px;\n  padding: 4px;\n  padding-right: 30px;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2hhcmVkLW1vZHVsZS9oZWFkZXIvRDovUHJvamVrdHkvQW5ndWxhclByb2plY3Qvc3JjL2FwcC9zaGFyZWQtbW9kdWxlL2hlYWRlci9oZWFkZXIuY29tcG9uZW50Lmxlc3MiLCJzcmMvYXBwL3NoYXJlZC1tb2R1bGUvaGVhZGVyL2hlYWRlci5jb21wb25lbnQubGVzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFFQTtFQUNJLG9CQUFBO0VBQ0EsY0FBQTtFQUNBLG9CQUFBO0NDREg7QURGRDtFQU1RLGdCQUFBO0VBQ0EsaUJBQUE7RUFDQSxlQUFBO0VBQ0EsMEJBQUE7Q0NEUDtBREtEO0VBQ0ksZ0JBQUE7RUFDQSxnQkFBQTtFQUNBLGFBQUE7Q0NISDtBRE1EO0VBQ0ksZ0JBQUE7RUFDQSxhQUFBO0VBQ0EsZ0JBQUE7RUFDQSxhQUFBO0VBQ0EsbUJBQUE7Q0NKSDtBRE9EO0VBQ0ksZ0JBQUE7RUFDQSxhQUFBO0VBQ0Esb0JBQUE7Q0NMSCIsImZpbGUiOiJzcmMvYXBwL3NoYXJlZC1tb2R1bGUvaGVhZGVyL2hlYWRlci5jb21wb25lbnQubGVzcyIsInNvdXJjZXNDb250ZW50IjpbIkBpbXBvcnQgXCIuLi8uLi8uLi9hc3NldHMvc3R5bGVzL3ZhcmlhYmxlc1wiO1xuXG4uaGVhZGVyIHtcbiAgICBiYWNrZ3JvdW5kOiBAd2hpdGU7XG4gICAgcGFkZGluZzogMTVweDtcbiAgICBtYXJnaW4tYm90dG9tOiAxNXB4O1xuXG4gICAgLmxldmVscyB7XG4gICAgICAgIGZvbnQtc2l6ZTogMjRweDtcbiAgICAgICAgZm9udC13ZWlnaHQ6IDcwMDtcbiAgICAgICAgY29sb3I6IEBibHVlO1xuICAgICAgICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlO1xuICAgIH1cbn1cblxuLmxvZ291dC1pY29uIHtcbiAgICBmb250LXNpemU6IDM1cHg7XG4gICAgY3Vyc29yOiBwb2ludGVyO1xuICAgIHBhZGRpbmc6IDRweDtcbn1cblxuLmhvbWUtaWNvbiB7XG4gICAgZm9udC1zaXplOiAzNXB4O1xuICAgIGNvbG9yOiB3aGl0ZTtcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgcGFkZGluZzogNHB4O1xuICAgIG1hcmdpbi1yaWdodDogMTVweDtcbn1cblxuLnVzZXItbG9naW4ge1xuICAgIGZvbnQtc2l6ZTogMTVweDtcbiAgICBwYWRkaW5nOiA0cHg7XG4gICAgcGFkZGluZy1yaWdodDogMzBweDtcbn1cblxuIiwiLmhlYWRlciB7XG4gIGJhY2tncm91bmQ6ICNmZmZmZmY7XG4gIHBhZGRpbmc6IDE1cHg7XG4gIG1hcmdpbi1ib3R0b206IDE1cHg7XG59XG4uaGVhZGVyIC5sZXZlbHMge1xuICBmb250LXNpemU6IDI0cHg7XG4gIGZvbnQtd2VpZ2h0OiA3MDA7XG4gIGNvbG9yOiAjMWEzMTYyO1xuICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlO1xufVxuLmxvZ291dC1pY29uIHtcbiAgZm9udC1zaXplOiAzNXB4O1xuICBjdXJzb3I6IHBvaW50ZXI7XG4gIHBhZGRpbmc6IDRweDtcbn1cbi5ob21lLWljb24ge1xuICBmb250LXNpemU6IDM1cHg7XG4gIGNvbG9yOiB3aGl0ZTtcbiAgY3Vyc29yOiBwb2ludGVyO1xuICBwYWRkaW5nOiA0cHg7XG4gIG1hcmdpbi1yaWdodDogMTVweDtcbn1cbi51c2VyLWxvZ2luIHtcbiAgZm9udC1zaXplOiAxNXB4O1xuICBwYWRkaW5nOiA0cHg7XG4gIHBhZGRpbmctcmlnaHQ6IDMwcHg7XG59XG4iXX0= */"
 
 /***/ }),
 
@@ -1069,6 +1471,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _header_header_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./header/header.component */ "./src/app/shared-module/header/header.component.ts");
 /* harmony import */ var _pipes_surname_shortcut_pipe__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./pipes/surname-shortcut.pipe */ "./src/app/shared-module/pipes/surname-shortcut.pipe.ts");
 /* harmony import */ var _directives_important_directive__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./directives/important.directive */ "./src/app/shared-module/directives/important.directive.ts");
+/* harmony import */ var _material_material_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../material/material.module */ "./src/app/material/material.module.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1080,13 +1484,17 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
+
 var SharedModule = /** @class */ (function () {
     function SharedModule() {
     }
     SharedModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
             imports: [
-                _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"]
+                _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
+                _material_material_module__WEBPACK_IMPORTED_MODULE_5__["MaterialModule"],
+                _angular_router__WEBPACK_IMPORTED_MODULE_6__["RouterModule"]
             ],
             exports: [_header_header_component__WEBPACK_IMPORTED_MODULE_2__["HeaderComponent"], _pipes_surname_shortcut_pipe__WEBPACK_IMPORTED_MODULE_3__["SurnameShortcutPipe"], _directives_important_directive__WEBPACK_IMPORTED_MODULE_4__["ImportantDirective"]],
             declarations: [_header_header_component__WEBPACK_IMPORTED_MODULE_2__["HeaderComponent"], _pipes_surname_shortcut_pipe__WEBPACK_IMPORTED_MODULE_3__["SurnameShortcutPipe"], _directives_important_directive__WEBPACK_IMPORTED_MODULE_4__["ImportantDirective"]],

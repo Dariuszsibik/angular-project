@@ -6,7 +6,7 @@ import { DashboardComponent } from "./core-module/dashboard/dashboard.component"
 import { FlightsComponent } from "./flights/flights.component";
 
 const APP_ROUTERS: Route[] = [
-    { path: '', redirectTo: '/login' ,pathMatch: 'full' },
+    { path: '', redirectTo: '/dashboard' ,pathMatch: 'full' },
     { path: 'login', component: LoginComponent},
     { path: 'dashboard', component: DashboardComponent},
     { path: 'cars', component: CarsListComponent},
