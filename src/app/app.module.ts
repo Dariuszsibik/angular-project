@@ -14,6 +14,7 @@ import { environment } from './../environments/environment';
 import { MaterialModule } from './material/material.module';
 import { DashboardComponent } from './core-module/dashboard/dashboard.component';
 import { LoginComponent } from './core-module/login/login.component';
+import { FlightsComponent } from './flights/flights.component';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { LoginComponent } from './core-module/login/login.component';
     AppComponent,
     DashboardComponent,
     LoginComponent,
+    FlightsComponent,
   ],
   imports: [
     BrowserModule,
