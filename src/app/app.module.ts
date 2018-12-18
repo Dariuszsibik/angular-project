@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { CarsModule } from './cars/cars.module';
 import { CarsService } from './cars/cars.service';
 import { CoreModule } from './core-module/core-module';
+import { FlightsModule } from '../app/flights/flights.module';
 import { SharedModule } from './shared-module/shared-module';
 import { AppRoutingModule } from './app-routing-module';
 import { CarsRoutingModule } from './cars/cars-routing.module';
@@ -15,7 +16,6 @@ import { environment } from './../environments/environment';
 import { MaterialModule } from './material/material.module';
 import { DashboardComponent } from './core-module/dashboard/dashboard.component';
 import { LoginComponent } from './core-module/login/login.component';
-import { FlightsComponent } from './flights/flights.component';
 
 
 @NgModule({
@@ -23,7 +23,6 @@ import { FlightsComponent } from './flights/flights.component';
     AppComponent,
     DashboardComponent,
     LoginComponent,
-    FlightsComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,7 +35,8 @@ import { FlightsComponent } from './flights/flights.component';
     CarsRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
-    MaterialModule
+    MaterialModule,
+    FlightsModule
   ],
   providers: [CarsService],
   bootstrap: [AppComponent]
