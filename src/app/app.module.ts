@@ -12,11 +12,15 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { environment } from './../environments/environment';
 import { MaterialModule } from './material/material.module';
+import { DashboardComponent } from './core-module/dashboard/dashboard.component';
+import { LoginComponent } from './core-module/login/login.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    DashboardComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,11 +1,15 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Route } from "@angular/router";
 import { CarsListComponent } from "./cars/cars-list/cars-list.component";
+import { LoginComponent } from "./core-module/login/login.component";
+import { DashboardComponent } from "./core-module/dashboard/dashboard.component";
 
 const APP_ROUTERS: Route[] = [
-    //{ path: '', redirectTo: '/login', pathMatch: 'full'}
-    { path: '', pathMatch: 'full', redirectTo: 'cars' },
-    { path: 'cars', component: <any>CarsListComponent}
+    { path: '', redirectTo: '/login' ,pathMatch: 'full' },
+    { path: 'login', component: LoginComponent},
+    { path: 'dashboard', component: DashboardComponent},
+    { path: 'cars', component: CarsListComponent},
+    //{ path: 'fly', component: FlyComponent}
 ];
 
 @NgModule({
