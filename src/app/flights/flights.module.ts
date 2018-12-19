@@ -5,9 +5,11 @@ import { MaterialModule } from '../material/material.module';
 import { FlightsComponent } from './flights.component';
 import { CoreModule } from '../core-module/core-module';
 import { SharedModule } from '../shared-module/shared-module';
+import { NewFlightComponent } from './new-flight/new-flight.component';
 
 @NgModule({
-  declarations: [FlightsComponent, FlightCardComponent],
+  declarations: [FlightsComponent, FlightCardComponent, NewFlightComponent],
+  entryComponents: [NewFlightComponent],
   imports: [
     CommonModule,
     MaterialModule,
