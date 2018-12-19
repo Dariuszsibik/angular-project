@@ -6,9 +6,10 @@ import { FlightsComponent } from './flights.component';
 import { CoreModule } from '../core-module/core-module';
 import { SharedModule } from '../shared-module/shared-module';
 import { NewFlightComponent } from './new-flight/new-flight.component';
+import { FlightFormComponent } from './flight-form/flight-form.component';
 
 @NgModule({
-  declarations: [FlightsComponent, FlightCardComponent, NewFlightComponent],
+  declarations: [FlightsComponent, FlightCardComponent, NewFlightComponent, FlightFormComponent],
   entryComponents: [NewFlightComponent],
   imports: [
     CommonModule,
