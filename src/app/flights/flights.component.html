@@ -1,8 +1,10 @@
 <cs-header>
 </cs-header>
 
-<div class="row flight-container">
-  <div class="col-sm-4" *ngFor="let flight of flights$ | async">
-    <cs-flight-card [flight]="flight"></cs-flight-card>
+<div class="container">
+  <div class="row flight-container">
+    <div class="col-sm-4" *ngFor="let flight of flights$ | async">
+      <cs-flight-card [flight]="flight"></cs-flight-card>
+    </div>
   </div>
 </div>
