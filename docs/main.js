@@ -147,24 +147,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppModule", function() { return AppModule; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
-/* harmony import */ var _angular_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/http */ "./node_modules/@angular/http/fesm5/http.js");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _cars_cars_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./cars/cars.module */ "./src/app/cars/cars.module.ts");
-/* harmony import */ var _cars_cars_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./cars/cars.service */ "./src/app/cars/cars.service.ts");
-/* harmony import */ var _core_module_core_module__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./core-module/core-module */ "./src/app/core-module/core-module.ts");
-/* harmony import */ var _app_flights_flights_module__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../app/flights/flights.module */ "./src/app/flights/flights.module.ts");
-/* harmony import */ var _shared_module_shared_module__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./shared-module/shared-module */ "./src/app/shared-module/shared-module.ts");
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./app-routing-module */ "./src/app/app-routing-module.ts");
-/* harmony import */ var _cars_cars_routing_module__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./cars/cars-routing.module */ "./src/app/cars/cars-routing.module.ts");
-/* harmony import */ var angularfire2__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! angularfire2 */ "./node_modules/angularfire2/index.js");
-/* harmony import */ var angularfire2__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(angularfire2__WEBPACK_IMPORTED_MODULE_12__);
-/* harmony import */ var angularfire2_database__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! angularfire2/database */ "./node_modules/angularfire2/database/index.js");
-/* harmony import */ var angularfire2_database__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(angularfire2_database__WEBPACK_IMPORTED_MODULE_13__);
-/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./../environments/environment */ "./src/environments/environment.ts");
-/* harmony import */ var _material_material_module__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./material/material.module */ "./src/app/material/material.module.ts");
-/* harmony import */ var _core_module_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./core-module/dashboard/dashboard.component */ "./src/app/core-module/dashboard/dashboard.component.ts");
-/* harmony import */ var _core_module_login_login_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./core-module/login/login.component */ "./src/app/core-module/login/login.component.ts");
+/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
+/* harmony import */ var _angular_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/http */ "./node_modules/@angular/http/fesm5/http.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _cars_cars_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./cars/cars.module */ "./src/app/cars/cars.module.ts");
+/* harmony import */ var _cars_cars_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./cars/cars.service */ "./src/app/cars/cars.service.ts");
+/* harmony import */ var _core_module_core_module__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./core-module/core-module */ "./src/app/core-module/core-module.ts");
+/* harmony import */ var _app_flights_flights_module__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../app/flights/flights.module */ "./src/app/flights/flights.module.ts");
+/* harmony import */ var _shared_module_shared_module__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./shared-module/shared-module */ "./src/app/shared-module/shared-module.ts");
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./app-routing-module */ "./src/app/app-routing-module.ts");
+/* harmony import */ var _cars_cars_routing_module__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./cars/cars-routing.module */ "./src/app/cars/cars-routing.module.ts");
+/* harmony import */ var angularfire2__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! angularfire2 */ "./node_modules/angularfire2/index.js");
+/* harmony import */ var angularfire2__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(angularfire2__WEBPACK_IMPORTED_MODULE_13__);
+/* harmony import */ var angularfire2_database__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! angularfire2/database */ "./node_modules/angularfire2/database/index.js");
+/* harmony import */ var angularfire2_database__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(angularfire2_database__WEBPACK_IMPORTED_MODULE_14__);
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./../environments/environment */ "./src/environments/environment.ts");
+/* harmony import */ var _material_material_module__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./material/material.module */ "./src/app/material/material.module.ts");
+/* harmony import */ var _core_module_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./core-module/dashboard/dashboard.component */ "./src/app/core-module/dashboard/dashboard.component.ts");
+/* harmony import */ var _core_module_login_login_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./core-module/login/login.component */ "./src/app/core-module/login/login.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -189,32 +190,34 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"],
-                _core_module_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_16__["DashboardComponent"],
-                _core_module_login_login_component__WEBPACK_IMPORTED_MODULE_17__["LoginComponent"],
+                _app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"],
+                _core_module_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_17__["DashboardComponent"],
+                _core_module_login_login_component__WEBPACK_IMPORTED_MODULE_18__["LoginComponent"],
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
-                _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"],
-                _angular_http__WEBPACK_IMPORTED_MODULE_2__["HttpModule"],
-                _cars_cars_module__WEBPACK_IMPORTED_MODULE_5__["CarsModule"],
-                _core_module_core_module__WEBPACK_IMPORTED_MODULE_7__["CoreModule"],
-                _shared_module_shared_module__WEBPACK_IMPORTED_MODULE_9__["SharedModule"],
-                _app_routing_module__WEBPACK_IMPORTED_MODULE_10__["AppRoutingModule"],
-                _cars_cars_routing_module__WEBPACK_IMPORTED_MODULE_11__["CarsRoutingModule"],
-                angularfire2__WEBPACK_IMPORTED_MODULE_12__["AngularFireModule"].initializeApp(_environments_environment__WEBPACK_IMPORTED_MODULE_14__["environment"].firebase),
-                angularfire2_database__WEBPACK_IMPORTED_MODULE_13__["AngularFireDatabaseModule"],
-                _material_material_module__WEBPACK_IMPORTED_MODULE_15__["MaterialModule"],
-                _app_flights_flights_module__WEBPACK_IMPORTED_MODULE_8__["FlightsModule"]
+                _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_2__["BrowserAnimationsModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormsModule"],
+                _angular_http__WEBPACK_IMPORTED_MODULE_3__["HttpModule"],
+                _cars_cars_module__WEBPACK_IMPORTED_MODULE_6__["CarsModule"],
+                _core_module_core_module__WEBPACK_IMPORTED_MODULE_8__["CoreModule"],
+                _shared_module_shared_module__WEBPACK_IMPORTED_MODULE_10__["SharedModule"],
+                _app_routing_module__WEBPACK_IMPORTED_MODULE_11__["AppRoutingModule"],
+                _cars_cars_routing_module__WEBPACK_IMPORTED_MODULE_12__["CarsRoutingModule"],
+                angularfire2__WEBPACK_IMPORTED_MODULE_13__["AngularFireModule"].initializeApp(_environments_environment__WEBPACK_IMPORTED_MODULE_15__["environment"].firebase),
+                angularfire2_database__WEBPACK_IMPORTED_MODULE_14__["AngularFireDatabaseModule"],
+                _material_material_module__WEBPACK_IMPORTED_MODULE_16__["MaterialModule"],
+                _app_flights_flights_module__WEBPACK_IMPORTED_MODULE_9__["FlightsModule"]
             ],
-            providers: [_cars_cars_service__WEBPACK_IMPORTED_MODULE_6__["CarsService"]],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
+            providers: [_cars_cars_service__WEBPACK_IMPORTED_MODULE_7__["CarsService"]],
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
@@ -1029,7 +1032,7 @@ var SidebarComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"card-container\">\r\n  <div class=\"shadow card-content\">\r\n    <div class=\"row\">\r\n      <div class=\"col\">\r\n        <p class=\"origin\">{{ flight.origin }} </p>\r\n        <p class=\"destination\">{{ flight.destination }}</p>\r\n      </div>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"col\">\r\n        <p class=\"time\">{{ flight.departureTime }} - {{ flight.returnTime }}</p>\r\n      </div>\r\n    </div>\r\n      <mat-icon>airplanemode_active</mat-icon>\r\n  </div>\r\n</div>"
+module.exports = "<div class=\"card-container\">\r\n  <div class=\"shadow card-content\">\r\n    <div class=\"row\">\r\n      <div class=\"col\">\r\n        <p class=\"origin\">{{ flight.origin }} </p>\r\n        <p class=\"destination\">{{ flight.destination }}</p>\r\n      </div>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"col\">\r\n        <p class=\"time\">{{ flight.departureTime }} - {{ flight.returnTime }}</p>\r\n      </div>\r\n    </div>\r\n    <div class=\"icon-container shadow\">\r\n      <mat-icon>airplanemode_active</mat-icon>\r\n    </div>\r\n  </div>\r\n</div>"
 
 /***/ }),
 
@@ -1040,7 +1043,7 @@ module.exports = "<div class=\"card-container\">\r\n  <div class=\"shadow card-c
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2ZsaWdodHMvZmxpZ2h0LWNhcmQvZmxpZ2h0LWNhcmQuY29tcG9uZW50Lmxlc3MifQ== */"
+module.exports = ":host {\n  cursor: pointer;\n}\n.card-container {\n  padding: 15px;\n  position: relative;\n}\n.card-content {\n  padding: 30px 20px;\n  background: white;\n}\n.icon-container {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  position: absolute;\n  left: 50%;\n  top: -10px;\n  height: 50px;\n  width: 50px;\n  background: white;\n  border-radius: 50%;\n  z-index: 10;\n  border: 1px solid grey;\n  -webkit-transform: translateX(-50%);\n          transform: translateX(-50%);\n}\n.icon-container mat-icon {\n  color: darkblue;\n}\n.time {\n  text-align: center;\n  font-size: 16px;\n  color: grey;\n}\n.destination,\n.origin {\n  font-size: 26px;\n  font-weight: bold;\n  color: deeppink;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZmxpZ2h0cy9mbGlnaHQtY2FyZC9EOi9Qcm9qZWt0eS9Bbmd1bGFyUHJvamVjdC9zcmMvYXBwL2ZsaWdodHMvZmxpZ2h0LWNhcmQvZmxpZ2h0LWNhcmQuY29tcG9uZW50Lmxlc3MiLCJzcmMvYXBwL2ZsaWdodHMvZmxpZ2h0LWNhcmQvZmxpZ2h0LWNhcmQuY29tcG9uZW50Lmxlc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxnQkFBQTtDQ0NIO0FERUQ7RUFDSSxjQUFBO0VBQ0EsbUJBQUE7Q0NBSDtBREdEO0VBQ0ksbUJBQUE7RUFDQSxrQkFBQTtDQ0RIO0FESUQ7RUFDSSxjQUFBO0VBQ0Esb0JBQUE7RUFDQSx3QkFBQTtFQUVBLG1CQUFBO0VBQ0EsVUFBQTtFQUNBLFdBQUE7RUFDQSxhQUFBO0VBQ0EsWUFBQTtFQUNBLGtCQUFBO0VBQ0EsbUJBQUE7RUFDQSxZQUFBO0VBQ0EsdUJBQUE7RUFFQSxvQ0FBQTtVQUFBLDRCQUFBO0NDSkg7QURYRDtFQWtCUSxnQkFBQTtDQ0pQO0FEUUQ7RUFDSSxtQkFBQTtFQUNBLGdCQUFBO0VBQ0EsWUFBQTtDQ05IO0FEU0Q7O0VBQ0ksZ0JBQUE7RUFDQSxrQkFBQTtFQUNBLGdCQUFBO0NDTkgiLCJmaWxlIjoic3JjL2FwcC9mbGlnaHRzL2ZsaWdodC1jYXJkL2ZsaWdodC1jYXJkLmNvbXBvbmVudC5sZXNzIiwic291cmNlc0NvbnRlbnQiOlsiOmhvc3Qge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbn1cblxuLmNhcmQtY29udGFpbmVyIHtcbiAgICBwYWRkaW5nOiAxNXB4O1xuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbn1cblxuLmNhcmQtY29udGVudCB7XG4gICAgcGFkZGluZzogMzBweCAyMHB4O1xuICAgIGJhY2tncm91bmQ6IHdoaXRlO1xufVxuXG4uaWNvbi1jb250YWluZXIge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICAvL3d6Z2zEmWRlbSBjYXJkXG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIGxlZnQ6IDUwJTtcbiAgICB0b3A6IC0xMHB4O1xuICAgIGhlaWdodDogNTBweDtcbiAgICB3aWR0aDogNTBweDtcbiAgICBiYWNrZ3JvdW5kOiB3aGl0ZTtcbiAgICBib3JkZXItcmFkaXVzOiA1MCU7XG4gICAgei1pbmRleDogMTA7XG4gICAgYm9yZGVyOiAxcHggc29saWQgZ3JleTtcbiAgICAvLyBjZW50cnVqZW15IGVsZW1lbnQgd3pnbMSZZGVtIGlubmVnb1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWCgtNTAlKTtcblxuICAgIG1hdC1pY29uIHtcbiAgICAgICAgY29sb3I6IGRhcmtibHVlO1xuICAgIH1cbn1cblxuLnRpbWUge1xuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgICBmb250LXNpemU6IDE2cHg7XG4gICAgY29sb3I6IGdyZXk7XG59XG5cbi5kZXN0aW5hdGlvbiwgLm9yaWdpbiB7XG4gICAgZm9udC1zaXplOiAyNnB4O1xuICAgIGZvbnQtd2VpZ2h0OiBib2xkO1xuICAgIGNvbG9yOiBkZWVwcGluaztcbn0iLCI6aG9zdCB7XG4gIGN1cnNvcjogcG9pbnRlcjtcbn1cbi5jYXJkLWNvbnRhaW5lciB7XG4gIHBhZGRpbmc6IDE1cHg7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbn1cbi5jYXJkLWNvbnRlbnQge1xuICBwYWRkaW5nOiAzMHB4IDIwcHg7XG4gIGJhY2tncm91bmQ6IHdoaXRlO1xufVxuLmljb24tY29udGFpbmVyIHtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgbGVmdDogNTAlO1xuICB0b3A6IC0xMHB4O1xuICBoZWlnaHQ6IDUwcHg7XG4gIHdpZHRoOiA1MHB4O1xuICBiYWNrZ3JvdW5kOiB3aGl0ZTtcbiAgYm9yZGVyLXJhZGl1czogNTAlO1xuICB6LWluZGV4OiAxMDtcbiAgYm9yZGVyOiAxcHggc29saWQgZ3JleTtcbiAgdHJhbnNmb3JtOiB0cmFuc2xhdGVYKC01MCUpO1xufVxuLmljb24tY29udGFpbmVyIG1hdC1pY29uIHtcbiAgY29sb3I6IGRhcmtibHVlO1xufVxuLnRpbWUge1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIGZvbnQtc2l6ZTogMTZweDtcbiAgY29sb3I6IGdyZXk7XG59XG4uZGVzdGluYXRpb24sXG4ub3JpZ2luIHtcbiAgZm9udC1zaXplOiAyNnB4O1xuICBmb250LXdlaWdodDogYm9sZDtcbiAgY29sb3I6IGRlZXBwaW5rO1xufVxuIl19 */"
 
 /***/ }),
 
@@ -1086,6 +1089,69 @@ var FlightCardComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/flights/flight-form/flight-form.component.html":
+/*!****************************************************************!*\
+  !*** ./src/app/flights/flight-form/flight-form.component.html ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<form>\r\n  <div class=\"row\">\r\n    <div class=\"col-sm-8\">\r\n      <mat-form-field>\r\n        <input matInput placeholder=\"Code\">\r\n      </mat-form-field>\r\n    </div>\r\n  </div>\r\n  <div class=\"row\">\r\n    <div class=\"col-sm-4\">\r\n      <mat-form-field>\r\n        <input matInput placeholder=\"Origin\">\r\n      </mat-form-field>\r\n    </div>\r\n  </div>\r\n  <div class=\"row\">\r\n    <div class=\"col-sm-4\">\r\n      <mat-form-field>\r\n        <input matInput placeholder=\"Destination\">\r\n      </mat-form-field>\r\n    </div>\r\n  </div>\r\n  <div class=\"row\">\r\n    <div class=\"col-sm-4\">\r\n      <mat-form-field>\r\n        <input matInput placeholder=\"Deprature time\">\r\n      </mat-form-field>\r\n    </div>\r\n  </div>\r\n  <div class=\"row\">\r\n    <div class=\"col-sm-4\">\r\n      <mat-form-field>\r\n        <input matInput placeholder=\"Return time\">\r\n      </mat-form-field>\r\n    </div>\r\n  </div>\r\n  <div class=\"row\">\r\n    <div class=\"col-sm-8\">\r\n      <textarea matInput placeholder=\"Additional Information\"></textarea>\r\n    </div>\r\n  </div>\r\n  <div class=\"row\">\r\n    <div class=\"col\">\r\n      <mat-checkbox>With SK Discount</mat-checkbox>\r\n    </div>\r\n  </div>\r\n</form>\r\n"
+
+/***/ }),
+
+/***/ "./src/app/flights/flight-form/flight-form.component.less":
+/*!****************************************************************!*\
+  !*** ./src/app/flights/flight-form/flight-form.component.less ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2ZsaWdodHMvZmxpZ2h0LWZvcm0vZmxpZ2h0LWZvcm0uY29tcG9uZW50Lmxlc3MifQ== */"
+
+/***/ }),
+
+/***/ "./src/app/flights/flight-form/flight-form.component.ts":
+/*!**************************************************************!*\
+  !*** ./src/app/flights/flight-form/flight-form.component.ts ***!
+  \**************************************************************/
+/*! exports provided: FlightFormComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FlightFormComponent", function() { return FlightFormComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var FlightFormComponent = /** @class */ (function () {
+    function FlightFormComponent() {
+    }
+    FlightFormComponent.prototype.ngOnInit = function () {
+    };
+    FlightFormComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'cs-flight-form',
+            template: __webpack_require__(/*! ./flight-form.component.html */ "./src/app/flights/flight-form/flight-form.component.html"),
+            styles: [__webpack_require__(/*! ./flight-form.component.less */ "./src/app/flights/flight-form/flight-form.component.less")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], FlightFormComponent);
+    return FlightFormComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/flights/flights.component.html":
 /*!************************************************!*\
   !*** ./src/app/flights/flights.component.html ***!
@@ -1093,7 +1159,7 @@ var FlightCardComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<cs-header>\r\n</cs-header>\r\n\r\n<div class=\"row flight-container\">\r\n  <div class=\"col-sm-4\" *ngFor=\"let flight of flights$ | async\">\r\n    <cs-flight-card [flight]=\"flight\"></cs-flight-card>\r\n  </div>\r\n</div>"
+module.exports = "<cs-header>\r\n</cs-header>\r\n\r\n<div class=\"container\">\r\n  <div class=\"row flight-container\">\r\n    <div class=\"col-sm-4\" *ngFor=\"let flight of flights$ | async\">\r\n      <cs-flight-card [flight]=\"flight\"></cs-flight-card>\r\n    </div>\r\n  </div>\r\n</div>\r\n<button (click)=\"openNewFlightModal()\" mat-fab color=\"accent\" id=\"new-flight-btn\">+</button>"
 
 /***/ }),
 
@@ -1104,7 +1170,7 @@ module.exports = "<cs-header>\r\n</cs-header>\r\n\r\n<div class=\"row flight-con
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2ZsaWdodHMvZmxpZ2h0cy5jb21wb25lbnQubGVzcyJ9 */"
+module.exports = ".flight-container {\n  padding-top: 30px;\n}\n#new-flight-btn {\n  position: fixed;\n  bottom: 50px;\n  right: 50px;\n  font-size: 30px;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZmxpZ2h0cy9EOi9Qcm9qZWt0eS9Bbmd1bGFyUHJvamVjdC9zcmMvYXBwL2ZsaWdodHMvZmxpZ2h0cy5jb21wb25lbnQubGVzcyIsInNyYy9hcHAvZmxpZ2h0cy9mbGlnaHRzLmNvbXBvbmVudC5sZXNzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksa0JBQUE7Q0NDSDtBREVEO0VBQ0ksZ0JBQUE7RUFDQSxhQUFBO0VBQ0EsWUFBQTtFQUNBLGdCQUFBO0NDQUgiLCJmaWxlIjoic3JjL2FwcC9mbGlnaHRzL2ZsaWdodHMuY29tcG9uZW50Lmxlc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuZmxpZ2h0LWNvbnRhaW5lciB7XG4gICAgcGFkZGluZy10b3A6IDMwcHg7XG59XG5cbiNuZXctZmxpZ2h0LWJ0biB7XG4gICAgcG9zaXRpb246IGZpeGVkO1xuICAgIGJvdHRvbTogNTBweDtcbiAgICByaWdodDogNTBweDtcbiAgICBmb250LXNpemU6IDMwcHg7XG59IiwiLmZsaWdodC1jb250YWluZXIge1xuICBwYWRkaW5nLXRvcDogMzBweDtcbn1cbiNuZXctZmxpZ2h0LWJ0biB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgYm90dG9tOiA1MHB4O1xuICByaWdodDogNTBweDtcbiAgZm9udC1zaXplOiAzMHB4O1xufVxuIl19 */"
 
 /***/ }),
 
@@ -1120,6 +1186,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FlightsComponent", function() { return FlightsComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _flights_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./flights.service */ "./src/app/flights/flights.service.ts");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _new_flight_new_flight_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./new-flight/new-flight.component */ "./src/app/flights/new-flight/new-flight.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1131,18 +1199,25 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 };
 
 
+
+
 var FlightsComponent = /** @class */ (function () {
-    function FlightsComponent(flightsService) {
+    function FlightsComponent(dialog, flightsService) {
+        this.dialog = dialog;
         this.flightsService = flightsService;
         this.flights$ = this.flightsService.getFlights();
     }
+    FlightsComponent.prototype.openNewFlightModal = function () {
+        this.dialog.open(_new_flight_new_flight_component__WEBPACK_IMPORTED_MODULE_3__["NewFlightComponent"]);
+    };
     FlightsComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'cs-flights',
             template: __webpack_require__(/*! ./flights.component.html */ "./src/app/flights/flights.component.html"),
             styles: [__webpack_require__(/*! ./flights.component.less */ "./src/app/flights/flights.component.less")]
         }),
-        __metadata("design:paramtypes", [_flights_service__WEBPACK_IMPORTED_MODULE_1__["FlightsService"]])
+        __metadata("design:paramtypes", [_angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialog"],
+            _flights_service__WEBPACK_IMPORTED_MODULE_1__["FlightsService"]])
     ], FlightsComponent);
     return FlightsComponent;
 }());
@@ -1168,6 +1243,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _flights_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./flights.component */ "./src/app/flights/flights.component.ts");
 /* harmony import */ var _core_module_core_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../core-module/core-module */ "./src/app/core-module/core-module.ts");
 /* harmony import */ var _shared_module_shared_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../shared-module/shared-module */ "./src/app/shared-module/shared-module.ts");
+/* harmony import */ var _new_flight_new_flight_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./new-flight/new-flight.component */ "./src/app/flights/new-flight/new-flight.component.ts");
+/* harmony import */ var _flight_form_flight_form_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./flight-form/flight-form.component */ "./src/app/flights/flight-form/flight-form.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1181,12 +1258,15 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
+
 var FlightsModule = /** @class */ (function () {
     function FlightsModule() {
     }
     FlightsModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
-            declarations: [_flights_component__WEBPACK_IMPORTED_MODULE_4__["FlightsComponent"], _flight_card_flight_card_component__WEBPACK_IMPORTED_MODULE_2__["FlightCardComponent"]],
+            declarations: [_flights_component__WEBPACK_IMPORTED_MODULE_4__["FlightsComponent"], _flight_card_flight_card_component__WEBPACK_IMPORTED_MODULE_2__["FlightCardComponent"], _new_flight_new_flight_component__WEBPACK_IMPORTED_MODULE_7__["NewFlightComponent"], _flight_form_flight_form_component__WEBPACK_IMPORTED_MODULE_8__["FlightFormComponent"]],
+            entryComponents: [_new_flight_new_flight_component__WEBPACK_IMPORTED_MODULE_7__["NewFlightComponent"]],
             imports: [
                 _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
                 _material_material_module__WEBPACK_IMPORTED_MODULE_3__["MaterialModule"],
@@ -1266,6 +1346,70 @@ var FlightsService = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/flights/new-flight/new-flight.component.html":
+/*!**************************************************************!*\
+  !*** ./src/app/flights/new-flight/new-flight.component.html ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<h2 mat-dialog-title>New Flight Creator</h2>\r\n<mat-dialog-content>\r\n  <cs-flight-form #flightForm></cs-flight-form>\r\n</mat-dialog-content>\r\n<mat-dialog-actions>\r\n  <div class=\"row\">\r\n    <div class=\"col\">\r\n      <button mat-raised-button mat-dialog-close>Cancel</button>\r\n      <button mat-raised-button color=\"primary\">Create</button>\r\n    </div>\r\n  </div>\r\n</mat-dialog-actions>"
+
+/***/ }),
+
+/***/ "./src/app/flights/new-flight/new-flight.component.less":
+/*!**************************************************************!*\
+  !*** ./src/app/flights/new-flight/new-flight.component.less ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2ZsaWdodHMvbmV3LWZsaWdodC9uZXctZmxpZ2h0LmNvbXBvbmVudC5sZXNzIn0= */"
+
+/***/ }),
+
+/***/ "./src/app/flights/new-flight/new-flight.component.ts":
+/*!************************************************************!*\
+  !*** ./src/app/flights/new-flight/new-flight.component.ts ***!
+  \************************************************************/
+/*! exports provided: NewFlightComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NewFlightComponent", function() { return NewFlightComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var NewFlightComponent = /** @class */ (function () {
+    function NewFlightComponent(dialogRef) {
+        this.dialogRef = dialogRef;
+    }
+    NewFlightComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'cs-new-flight',
+            template: __webpack_require__(/*! ./new-flight.component.html */ "./src/app/flights/new-flight/new-flight.component.html"),
+            styles: [__webpack_require__(/*! ./new-flight.component.less */ "./src/app/flights/new-flight/new-flight.component.less")]
+        }),
+        __metadata("design:paramtypes", [_angular_material__WEBPACK_IMPORTED_MODULE_1__["MatDialogRef"]])
+    ], NewFlightComponent);
+    return NewFlightComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/material/material.module.ts":
 /*!*********************************************!*\
   !*** ./src/app/material/material.module.ts ***!
@@ -1286,6 +1430,11 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 
 
+var MAT_DIALOG_GLOBAL_CONFIG = {
+    width: '700px',
+    disableClose: true,
+    hasBackdrop: true
+};
 var MATERIAL_MODULES = [
     _angular_material__WEBPACK_IMPORTED_MODULE_1__["MatIconModule"],
     _angular_material__WEBPACK_IMPORTED_MODULE_1__["MatCardModule"],
@@ -1304,7 +1453,10 @@ var MaterialModule = /** @class */ (function () {
     MaterialModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
             declarations: [],
-            exports: MATERIAL_MODULES.slice()
+            exports: MATERIAL_MODULES.slice(),
+            providers: [
+                { provide: _angular_material__WEBPACK_IMPORTED_MODULE_1__["MAT_DIALOG_DEFAULT_OPTIONS"], useValue: MAT_DIALOG_GLOBAL_CONFIG }
+            ]
         })
     ], MaterialModule);
     return MaterialModule;
