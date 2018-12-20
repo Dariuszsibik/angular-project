@@ -8,10 +8,11 @@ import { SharedModule } from '../shared-module/shared-module';
 import { NewFlightComponent } from './new-flight/new-flight.component';
 import { FlightFormComponent } from './flight-form/flight-form.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { DetailsComponent } from './details/details.component';
 
 @NgModule({
-  declarations: [FlightsComponent, FlightCardComponent, NewFlightComponent, FlightFormComponent],
-  entryComponents: [NewFlightComponent],
+  declarations: [FlightsComponent, FlightCardComponent, NewFlightComponent, FlightFormComponent, DetailsComponent],
+  entryComponents: [NewFlightComponent, DetailsComponent],
   imports: [
     CommonModule,
     MaterialModule,
