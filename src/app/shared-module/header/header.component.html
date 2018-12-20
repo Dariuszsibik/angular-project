@@ -1,8 +1,8 @@
 <mat-toolbar color="primary">
     <div class="container">
-        <mat-icon class="logout-icon float-right">power_settings_new</mat-icon>
+        <mat-icon class="logout-icon float-right" (click)="logout()" >power_settings_new</mat-icon>
         <mat-icon class="home-icon float-right" routerLink="/dashboard">home</mat-icon>
-        <span class="user-login float-right">Hello, John</span>
+        <span class="user-login float-right">Hello {{ user.email }}</span>
     </div>
 </mat-toolbar>
 <div class="container">

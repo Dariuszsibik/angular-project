@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../login/auth.service';
 
 @Component({
   selector: 'cs-dashboard',
@@ -6,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.less']
 })
 export class DashboardComponent {
+  user = this.authService.user;
 
-  constructor() { }
+  constructor(private authService: AuthService) { }
 
 }

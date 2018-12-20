@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { MaterialModule } from '../material/material.module';
 import { LoginComponent } from './login/login.component';
 import { SharedModule } from '../shared-module/shared-module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   exports: [SidebarComponent],
@@ -13,7 +14,8 @@ import { SharedModule } from '../shared-module/shared-module';
     SharedModule,
     CommonModule,
     RouterModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule
   ]
 })
 export class CoreModule { }
