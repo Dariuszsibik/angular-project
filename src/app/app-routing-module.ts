@@ -5,11 +5,12 @@ import { LoginComponent } from './core-module/login/login.component';
 import { DashboardComponent } from './core-module/dashboard/dashboard.component';
 import { FlightsComponent } from './flights/flights.component';
 import { EditFlightComponent } from './flights/edit-flight/edit-flight.component';
+import { LoginGuard } from './core-module/login/login.guard';
 
 const APP_ROUTERS: Route[] = [
     { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
     { path: 'login', component: LoginComponent},
-    { path: 'dashboard', component: DashboardComponent},
+    { path: 'dashboard', component: DashboardComponent }, // canActivate: [LoginGuard], },
     { path: 'cars', component: CarsListComponent},
     { path: 'flights', component: FlightsComponent},
     { path: 'flights/:key', component: EditFlightComponent }
