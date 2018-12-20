@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { FlightFormComponent } from './../flight-form/flight-form.component';
+import { Component, ViewChild } from '@angular/core';
 import { MatDialogRef } from '@angular/material';
 
 @Component({
@@ -7,6 +8,7 @@ import { MatDialogRef } from '@angular/material';
   styleUrls: ['./new-flight.component.less']
 })
 export class NewFlightComponent {
+  @ViewChild('flightForm') flightForm: FlightFormComponent;
 
   constructor(
     private dialogRef: MatDialogRef<NewFlightComponent>

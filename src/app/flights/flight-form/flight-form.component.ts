@@ -1,5 +1,5 @@
 import * as core from '@angular/core';
-import { FormBuilder, FormGroup, FormArray } from '@angular/forms';
+import { FormBuilder, FormGroup, FormArray, Validators } from '@angular/forms';
 
 @core.Component({
   selector: 'cs-flight-form',
@@ -43,11 +43,11 @@ export class FlightFormComponent implements core.OnInit {
 
   private buildForm() {
     this.form = this.formBuilder.group({
-      origin: '',
-      destination: '',
-      departureTime: '',
-      returnTime: '',
-      code: '',
+      origin: ['', { validators: [Validators.required]} ],
+      destination: ['', { validators: [Validators.required]}],
+      departureTime: ['', { validators: [Validators.required]}],
+      returnTime: ['', { validators: [Validators.required]}],
+      code: ['SK', { validators: [Validators.required, Validators.minLength(4), Validators.maxLength(7) ] }],
       additionalInformation: '',
       withSKPlanesDiscount: false,
       crew: this.formBuilder.array([this.buildCrewMember()])
