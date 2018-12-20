@@ -18,7 +18,7 @@ export class FlightsComponent {
     private flightsService: FlightsService ) { }
 
   openNewFlightModal() {
-    this.dialog.open(NewFlightComponent)
+    this.dialog.open(NewFlightComponent);
   }
 
 }
