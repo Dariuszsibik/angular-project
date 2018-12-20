@@ -22,6 +22,14 @@ export class FlightsService {
       .pipe(map(flight => this.assignKey(flight)));
   }
 
+  editFlight(key: string, flight: Flight) {
+    return this.db.object<Flight>(`${this.API_URL}/${key}`).update(flight);
+  }
+
+  removeFlight(key: string) {
+    return this.db.object(`${this.API_URL}/${key}`).remove();
+  }
+
   addFlight(flight: Flight) {
     return this.db.list<Flight>(this.API_URL).push(flight);
   }
@@ -29,5 +37,4 @@ export class FlightsService {
   private assignKey(flight) {
     return {...flight.payload.val(), key: flight.key };
   }
-
 }

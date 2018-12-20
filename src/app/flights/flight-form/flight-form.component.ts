@@ -40,7 +40,7 @@ export class FlightFormComponent implements core.OnInit {
   }
 
   addCrewMember(crewMember?: Crew) {
-    this.crew.push(this.buildCrewMember());
+    this.crew.push(this.buildCrewMember(crewMember));
   }
 
   buildCrewMember(crewMember: Crew = {} as Crew) {
@@ -52,14 +52,20 @@ export class FlightFormComponent implements core.OnInit {
 
   private buildForm() {
     this.form = this.formBuilder.group({
-      origin: ['', { validators: [Validators.required]} ],
-      destination: ['', { validators: [Validators.required]}],
-      departureTime: ['', { validators: [Validators.required]}],
-      returnTime: ['', { validators: [Validators.required]}],
-      code: ['SK', { validators: [Validators.required, Validators.minLength(4), Validators.maxLength(7) ] }],
+      origin: ['', { validators: [Validators.required] }],
+      destination: ['', { validators: [Validators.required] }],
+      departureTime: ['', { validators: [Validators.required] }],
+      returnTime: ['', { validators: [Validators.required] }],
+      code: ['SK', {
+        validators: [
+          Validators.required,
+          Validators.minLength(4),
+          Validators.maxLength(7),
+        ] }],
       additionalInformation: '',
       withSKPlanesDiscount: false,
       crew: this.formBuilder.array(this.editMode ? [] : [this.buildCrewMember()])
-    });
+    })
   }
 }
+
