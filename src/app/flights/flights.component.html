@@ -2,9 +2,10 @@
 </cs-header>
 
 <div class="container">
-  <div class="row flight-container">
-    <div class="col-sm-4" *ngFor="let flight of flights$ | async">
-      <cs-flight-card [flight]="flight"></cs-flight-card>
+    <div class="row flight-container">
+        <div class="col-sm-4" *ngFor="let flight of flights$ | async" (click)="showDetails(flight)">
+            <cs-flight-card [flight]="flight"></cs-flight-card>
+        </div>
     </div>
-  </div>
 </div>
+<button (click)="openNewFlightModal()" mat-fab color="accent" id="new-flight-btn">+</button>

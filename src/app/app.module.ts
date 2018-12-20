@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpModule } from '@angular/http';
-import { FormsModule } from '@angular/forms'
+import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { CarsModule } from './cars/cars.module';
 import { CarsService } from './cars/cars.service';
@@ -26,6 +27,7 @@ import { LoginComponent } from './core-module/login/login.component';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     FormsModule,
     HttpModule,
     CarsModule,

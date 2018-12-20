@@ -4,7 +4,7 @@ import { TotalCostComponent } from '../total-cost/total-cost.component';
 import { CarsService } from '../cars.service';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import {Observable} from "rxjs/Observable";
+import {Observable} from 'rxjs/Observable';
 import 'rxjs-compat/add/operator/map';
 
 @Component({
@@ -14,17 +14,17 @@ import 'rxjs-compat/add/operator/map';
   encapsulation: ViewEncapsulation.None
 })
 export class CarsListComponent implements OnInit, AfterViewInit {
-  @ViewChild("totalCostRef") totalCostRef : TotalCostComponent
-  totalCost : number
-  grossCost : number
+  @ViewChild('totalCostRef') totalCostRef: TotalCostComponent;
+  totalCost: number;
+  grossCost: number;
   cars: Car[];
   carsList: Observable<Car[]>;
-  carForm : FormGroup;
+  carForm: FormGroup;
 
 
-  constructor(private carsService : CarsService,
-              private formBuilder : FormBuilder,
-              private router : Router) { }
+  constructor(private carsService: CarsService,
+              private formBuilder: FormBuilder,
+              private router: Router) { }
 
   ngOnInit() {
       this.loadCars();
@@ -48,24 +48,24 @@ export class CarsListComponent implements OnInit, AfterViewInit {
     });
   }
 
-  loadCars() : void {
+  loadCars(): void {
       this.carsService.getCars().subscribe((cars) => {
           this.cars = cars;
           this.countTotalCost();
-      })
+      });
   }
 
   addCar() {
        this.carsService.addCar(this.carForm.value);
   }
 
-  goToCarDetails(car : Car) {
+  goToCarDetails(car: Car) {
       this.router.navigate(['/cars', car.key]);
   }
 
   removeCar(car: Car, event) {
     event.stopPropagation();
-    this.carsService.removeCar(car.id).subscribe(()=> {
+    this.carsService.removeCar(car.id).subscribe(() => {
       this.loadCars();
     });
   }
@@ -74,17 +74,17 @@ export class CarsListComponent implements OnInit, AfterViewInit {
 
   }
 
-  showGross() : void {
+  showGross(): void {
       this.totalCostRef.showGross();
   }
 
-  countTotalCost() : void {
+  countTotalCost(): void {
       this.totalCost = this.cars
         .map((car) => car.cost)
-        .reduce((prev, next) => prev + next)
+        .reduce((prev, next) => prev + next);
   }
 
-  onShownGross(grossCost : number) : void {
+  onShownGross(grossCost: number): void {
       this.grossCost = grossCost;
   }
 }

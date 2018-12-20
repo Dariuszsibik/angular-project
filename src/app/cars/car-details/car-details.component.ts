@@ -10,12 +10,12 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./car-details.component.less']
 })
 export class CarDetailsComponent implements OnInit {
-  car : Car;
-  carForm : FormGroup;
+  car: Car;
+  carForm: FormGroup;
 
-  constructor(private carsService : CarsService,
-              private formBuilder : FormBuilder,
-              private router : Router,
+  constructor(private carsService: CarsService,
+              private formBuilder: FormBuilder,
+              private router: Router,
               private route: ActivatedRoute) { }
 
   ngOnInit() {
@@ -43,13 +43,13 @@ export class CarDetailsComponent implements OnInit {
   }
 
   updateCar() {
-    this.carsService.updateCar(this.car.id, this.carForm.value).subscribe(()=> {
+    this.carsService.updateCar(this.car.id, this.carForm.value).subscribe(() => {
           this.router.navigate(['/cars']);
     });
 }
 
   loadCar() {
-    this.car = this.route.snapshot.data['car']
+    this.car = this.route.snapshot.data['car'];
   }
 
 }

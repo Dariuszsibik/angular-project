@@ -7,8 +7,8 @@ import { LoginComponent } from './login/login.component';
 import { SharedModule } from '../shared-module/shared-module';
 
 @NgModule({
-  exports: [SidebarComponent,],
-  declarations: [SidebarComponent,],
+  exports: [SidebarComponent],
+  declarations: [SidebarComponent],
   imports: [
     SharedModule,
     CommonModule,
