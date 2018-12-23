@@ -1,11 +1,8 @@
+https://dariuszsibik.github.io/angular-project
+
 # AngularProject
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.6.
-
-# restAPI
-cd restAPI
-npm install
-`node .` - starting server port 3000
 
 ## Development server
 
