@@ -6,7 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
-import { FlightsModule } from '../app/flights/flights.module';
+import { FlightsModule } from './flights/flights.module';
 import { environment } from './../environments/environment';
 import { AppRoutingModule } from './app-routing-module';
 import { AppComponent } from './app.component';
