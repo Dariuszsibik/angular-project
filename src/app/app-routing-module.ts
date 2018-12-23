@@ -16,7 +16,7 @@ const APP_ROUTERS: Route[] = [
     { path: 'flights', component: FlightsComponent, canActivate: [LoginGuard] },
     { path: 'flights/:key', component: EditFlightComponent, canActivate: [LoginGuard] },
 
-    {path: '**', component: DashboardComponent}
+    {path: '**', component: PageNotFoundComponent}
 ];
 
 @NgModule({

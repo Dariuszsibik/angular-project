@@ -18,6 +18,7 @@ import { DashboardComponent } from './core-module/dashboard/dashboard.component'
 import { LoginComponent } from './core-module/login/login.component';
 import { MaterialModule } from './material/material.module';
 import { SharedModule } from './shared-module/shared-module';
+import { PageNotFoundComponent } from './core-module/page-not-found/page-not-found.component';
 
 
 
@@ -26,6 +27,7 @@ import { SharedModule } from './shared-module/shared-module';
     AppComponent,
     DashboardComponent,
     LoginComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

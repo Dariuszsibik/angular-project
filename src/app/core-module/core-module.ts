@@ -5,11 +5,10 @@ import { RouterModule } from '@angular/router';
 import { MaterialModule } from '../material/material.module';
 import { SharedModule } from '../shared-module/shared-module';
 import { FormsModule } from '@angular/forms';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
-  exports: [SidebarComponent, PageNotFoundComponent],
-  declarations: [SidebarComponent, PageNotFoundComponent],
+  exports: [SidebarComponent],
+  declarations: [SidebarComponent],
   imports: [
     SharedModule,
     CommonModule,
