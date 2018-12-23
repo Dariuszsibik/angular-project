@@ -12,7 +12,7 @@ export class AuthService {
 
   login(credentials: {email:string, password: string}) {
     return this.fireAuth.auth.signInWithEmailAndPassword(credentials.email, credentials.password)
-      .then(user => this.userData = user.user);
+      .then( userCredential => this.userData = userCredential.user );
   }
 
   register(credentials: {email:string, password: string}) {
@@ -24,6 +24,7 @@ export class AuthService {
   }
 
   logout() {
+    this.userData = null;
     return this.fireAuth.auth.signOut();
   }
 

@@ -3,11 +3,11 @@
     <mat-icon>supervised_user_circle</mat-icon>
     <h3>Login and register</h3>
     <mat-form-field class="d-block">
-      <input matInput placeholder="Email" [(ngModel)]="credentials.email" required>
+      <input matInput type="text" name="email" placeholder="Email" autocomplete="username email" [(ngModel)]="credentials.email" required>
       <mat-error>Email is required</mat-error>
     </mat-form-field>
     <mat-form-field class="d-block">
-      <input matInput placeholder="Password" [(ngModel)]="credentials.password" required>
+      <input matInput type="password" name="password" placeholder="Password" autocomplete="username password" [(ngModel)]="credentials.password" required>
       <mat-error>Password is required</mat-error>
     </mat-form-field>
     <button mat-raised-button color="primary" (click)="login()">LOG IN</button>

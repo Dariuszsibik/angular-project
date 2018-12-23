@@ -3,17 +3,18 @@ import { RouterModule, Route } from '@angular/router';
 import { CarsListComponent } from './cars/cars-list/cars-list.component';
 import { LoginComponent } from './core-module/login/login.component';
 import { DashboardComponent } from './core-module/dashboard/dashboard.component';
-import { FlightsComponent } from './flights/flights.component';
+import { FlightsModule } from './flights/flights.module';
 import { EditFlightComponent } from './flights/edit-flight/edit-flight.component';
 import { LoginGuard } from './core-module/login/login.guard';
+import { FlightsComponent } from './flights/flights.component';
 
 const APP_ROUTERS: Route[] = [
     { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
     { path: 'login', component: LoginComponent},
-    { path: 'dashboard', component: DashboardComponent }, // canActivate: [LoginGuard], },
-    { path: 'cars', component: CarsListComponent},
-    { path: 'flights', component: FlightsComponent},
-    { path: 'flights/:key', component: EditFlightComponent }
+    { path: 'dashboard', component: DashboardComponent, canActivate: [LoginGuard ] },
+    { path: 'cars', component: CarsListComponent, canActivate: [LoginGuard ] },
+    { path: 'flights', component: FlightsComponent, canActivate: [LoginGuard] },
+    { path: 'flights/:key', component: EditFlightComponent, canActivate: [LoginGuard] }
 ];
 
 @NgModule({

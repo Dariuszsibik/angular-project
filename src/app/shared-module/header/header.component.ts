@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, SimpleChanges } from '@angular/core';
 import { AuthService } from 'src/app/core-module/login/auth.service';
 import { Router } from '@angular/router';
 
@@ -16,7 +16,7 @@ export class HeaderComponent {
 
   logout() {
     this.authService.logout()
-      .then(() => this.router.navigate(['/login']))
+      .then(() => this.router.navigate(['/login']));
   }
 
 }
