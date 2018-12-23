@@ -2,6 +2,7 @@ import * as core from '@angular/core';
 import { FormBuilder, FormGroup, FormArray, Validators } from '@angular/forms';
 import { Flight, Crew } from '../model/flight.model';
 import { Input } from '@angular/core';
+import { flightCodeValidator } from './code.validator';
 
 @core.Component({
   selector: 'cs-flight-form',
@@ -61,6 +62,7 @@ export class FlightFormComponent implements core.OnInit {
           Validators.required,
           Validators.minLength(4),
           Validators.maxLength(7),
+          flightCodeValidator
         ] }],
       additionalInformation: '',
       withSKPlanesDiscount: false,
